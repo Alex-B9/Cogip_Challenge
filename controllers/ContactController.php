@@ -6,6 +6,6 @@ class ContactController extends Controller
 {
     public function index()
     {
-        require $this->view('contact');
+        require $this->view('contacts');
     }
 }

@@ -20,7 +20,7 @@ switch ($url) {
         $sign = new ConnectController();
         $sign->index();
         break;
-    case '/contact':
+    case '/contacts':
         $sign = new ContactController();
         $sign->index();
         break;
