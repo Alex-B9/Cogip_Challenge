@@ -11,5 +11,27 @@ switch ($url) {
         $home = new HomeController();
         $home->index();
         break;
+    case '':
+
+        break;
+    case '':
+
+        break;
+    case '':
+
+        break;
+    case '':
+
+        break;
+    case '':
+
+        break;
+    case '':
+
+        break;
+    case '':
+
+        break;
+    default: require ('views/notFound.php');
 
 }

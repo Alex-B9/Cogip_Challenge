@@ -4,8 +4,7 @@ $pageTitle = 'Home page';
 ob_get_clean();
 ?>
 
-    <h1>Home page</h1>
-    <p>Hello world !</p>
+    <h1>404 not found</h1>
 
 <?php
 
