@@ -1,7 +1,7 @@
 <?php
-
-$pageTitle = 'Home page';
-ob_get_clean();
+// optionnel :: $pageCSS = '../prout.css';
+$pageTitle = 'Home page'; // obligatoire
+ob_start(); // obligatoire
 ?>
 
     <h1>Home page</h1>
@@ -9,5 +9,5 @@ ob_get_clean();
 
 <?php
 
-$pageContent = ob_get_clean();
-require "layouts/layout.php";
+$pageContent = ob_get_clean(); // obligatoire
+require "layouts/layout.php"; // obligatoire

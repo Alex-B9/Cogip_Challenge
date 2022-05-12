@@ -4,7 +4,7 @@ $pageTitle = 'Home page';
 ob_get_clean();
 ?>
 
-    <h1>Sign in</h1>
+    <h1>Connect</h1>
 
 <?php
 
