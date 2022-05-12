@@ -1,8 +1,8 @@
 {
-    "name": "diwaa/cogip_challenge",
+    "name": "diwaa/cogig_challenge",
     "autoload": {
         "psr-4": {
-            "App\\": "/"
+            "App\\": "./"
         }
     },
     "authors": [
