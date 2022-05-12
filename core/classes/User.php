@@ -14,9 +14,11 @@ class User
         return $this->firstname;
     }
 
-    public function setFirstname($firstname)
+    public function setFirstname($firstname): User
     {
         $this->firstname = htmlspecialchars($firstname);
+
+        return $this;
     }
 
     public function getLastname()
@@ -24,9 +26,11 @@ class User
         return $this->lastname;
     }
 
-    public function setLastname($lastname)
+    public function setLastname($lastname): User
     {
         $this->lastname = htmlspecialchars($lastname);
+
+        return $this;
     }
 
     public function getEmail()
@@ -34,9 +38,11 @@ class User
         return $this->email;
     }
 
-    public function setEmail($email)
+    public function setEmail($email): User
     {
         $this->email = htmlspecialchars($email);
+
+        return $this;
     }
 
     public function getPassword()
@@ -44,8 +50,10 @@ class User
         return $this->password;
     }
 
-    public function setPassword($password)
+    public function setPassword($password): User
     {
         $this->password = htmlspecialchars(password_hash($password, PASSWORD_DEFAULT));
+
+        return $this;
     }
 }
