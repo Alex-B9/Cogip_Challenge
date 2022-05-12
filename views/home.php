@@ -2,6 +2,9 @@
 // optionnel :: $pageCSS = '../prout.css';
 $pageTitle = 'Home page'; // obligatoire
 ob_start(); // obligatoire
+
+include('navbar.php')
+
 ?>
 
     <h1>Home page</h1>
