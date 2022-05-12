@@ -1,8 +1,10 @@
 <?php
 
 use App\controllers\HomeController;
+use App\controllers\RegisterController;
+use App\controllers\SignInController;
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 $url = $_SERVER['REQUEST_URI'];
 
@@ -11,27 +13,14 @@ switch ($url) {
         $home = new HomeController();
         $home->index();
         break;
-    case '':
-
+    case '/sign-in':
+        $sign = new SignInController();
+        $sign->index();
         break;
-    case '':
-
+    case '/register':
+        $register = new RegisterController();
+        $register->index();
         break;
-    case '':
-
-        break;
-    case '':
-
-        break;
-    case '':
-
-        break;
-    case '':
-
-        break;
-    case '':
-
-        break;
-    default: require ('views/notFound.php');
-
+    default:
+        require('views/notFound.php');
 }
