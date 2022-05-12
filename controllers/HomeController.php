@@ -2,9 +2,7 @@
 
 namespace App\controllers;
 
-use App\controller\Controller;
-
-class HomeController extends controller
+class HomeController extends Controller
 {
     public function index()
     {
