@@ -11,5 +11,7 @@
             "email": "christopherdeleclusepro@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-pdo": "*"
+    }
 }
