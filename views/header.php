@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="./assets/css/style.css">
-
 <header>
     <nav class='navbarContainer'>
         <div class='linksContainer'>

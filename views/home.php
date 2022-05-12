@@ -3,7 +3,7 @@
 $pageTitle = 'Home page'; // obligatoire
 ob_start(); // obligatoire
 
-include('navbar.php')
+include('header.php')
 
 ?>
 
