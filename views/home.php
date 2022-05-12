@@ -3,7 +3,7 @@
 $pageTitle = 'Home page'; // obligatoire
 ob_start(); // obligatoire
 
-include('header.php')
+require "views/components/navigation.php";
 
 ?>
 
