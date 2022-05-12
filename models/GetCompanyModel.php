@@ -1,16 +1,15 @@
 <?php
 
-namespace App\core\classes;
+namespace App\models;
 
-class GetCompany
+class GetCompanyModel
 {
     private $name;
     private $country;
-    private $VATnumber;
+    private $vatNumber;
 
     public function getName()
     {
-
         return $this->name;
     }
 
@@ -19,8 +18,8 @@ class GetCompany
         return $this->country;
     }
 
-    public function getVATnumber()
+    public function getVatNumber()
     {
-        return $this->VATnumber;
+        return $this->vatNumber;
     }
 }
