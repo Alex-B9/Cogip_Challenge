@@ -1,4 +1,6 @@
-
+<?php
+$pageCSS='../navigation.css';
+?>
 
 <header>
     <nav class='navbarContainer'>
