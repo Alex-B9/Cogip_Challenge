@@ -21,6 +21,7 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 25px;
     position: absolute;
     width: 927.2px;
     height: 295.2px;
@@ -33,6 +34,7 @@ form {
 
 .field {
     display: flex ;
+    gap: 5px;
     flex-direction: column;
     font-style: normal;
     font-weight: 400;
@@ -48,8 +50,7 @@ input {
     box-sizing: border-box;
     width: 317px;
     height: 38px;
-
-
+    text-align: center;
     background: #DCEDF0;
     border-radius: 10px;
 }

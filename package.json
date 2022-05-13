@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home.css",
-    "sassConnect": "sass --watch sass/pages/mainConnect.scss:public/styles/pages/connect/connect.css"
+    "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home/home.css",
+    "sassConnect": "sass --watch sass/pages/mainConnect.scss:public/styles/pages/connect/connect.css"  
   },
   "repository": {
     "type": "git",
