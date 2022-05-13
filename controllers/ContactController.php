@@ -8,4 +8,9 @@ class ContactController extends Controller
     {
         require $this->view('contact');
     }
+
+    public function create()
+    {
+        require $this->view('contact_new');
+    }
 }

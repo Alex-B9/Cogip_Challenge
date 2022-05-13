@@ -21,16 +21,28 @@ switch ($url) {
         $sign->index();
         break;
     case '/contact':
-        $sign = new ContactController();
-        $sign->index();
+        $contact = new ContactController();
+        $contact->index();
+        break;
+    case '/contact-new':
+        $contact = new ContactController();
+        $contact->create();
         break;
     case '/invoices':
-        $sign = new InvoicesController();
-        $sign->index();
+        $invoices = new InvoicesController();
+        $invoices->index();
+        break;
+    case '/invoice-new':
+        $invoice = new InvoicesController();
+        $invoice->create();
         break;
     case '/companies':
-        $sign = new CompaniesController();
-        $sign->index();
+        $companies = new CompaniesController();
+        $companies->index();
+        break;
+    case '/company-new':
+        $company = new CompaniesController();
+        $company->create();
         break;
     case '/register':
         $register = new RegisterController();
