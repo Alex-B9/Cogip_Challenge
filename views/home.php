@@ -1,5 +1,5 @@
 <?php
-// optionnel :: $pageCSS = '../prout.css';
+$pageCSS = './../public/styles/pages/home.css';
 $pageTitle = 'Home page'; // obligatoire
 ob_start(); // obligatoire
 

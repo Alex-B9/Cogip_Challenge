@@ -1,5 +1,3 @@
-
-
 <header>
     <nav class='navbarContainer'>
         <div class='linksContainer'>
