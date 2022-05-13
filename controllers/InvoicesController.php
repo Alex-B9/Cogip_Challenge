@@ -8,4 +8,9 @@ class InvoicesController extends Controller
     {
         require $this->view('invoices');
     }
+
+    public function create()
+    {
+        require $this->view('invoice_new');
+    }
 }

@@ -8,4 +8,9 @@ class CompaniesController extends Controller
     {
         require $this->view('companies');
     }
+
+    public function create()
+    {
+        require $this->view('company_new');
+    }
 }
