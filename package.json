@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home.css"
+    "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home/home.css",
+    "sassContactNew" : "sass --watch sass/pages/mainContactNew.scss:public/styles/pages/contactNew/contactNew.css"
   },
   "repository": {
     "type": "git",

@@ -48,6 +48,8 @@ body h1 {
   text-transform: uppercase;
   color: #FFBF1C;
   font-size: 64px;
+  font-weight: 800;
+  text-align: center;
 }
 
 /*# sourceMappingURL=home.css.map */
