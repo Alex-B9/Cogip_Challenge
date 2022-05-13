@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellota&display=swap");
+header {
+  background-color: aqua;
+  width: 100%;
+}
+
+body {
+  font-family: 'Bellota', cursive;
+  background-color: #FFB800;
+}
+
+.field {
+  padding-left: 100px;
+  padding-right: 800px;
+  padding-bottom: 15px;
+}
+
+button {
+  background-color: #FFB800;
+}
+/*# sourceMappingURL=mainConnect.css.map */
