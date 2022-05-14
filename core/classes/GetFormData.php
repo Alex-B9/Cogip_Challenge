@@ -11,6 +11,7 @@ class GetFormData
     public function __construct($post)
     {
         $this->post = $this->toObject($post);
+
     }
 
     private function toObject($array) : stdClass

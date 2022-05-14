@@ -4,8 +4,7 @@ use App\controllers\CompaniesController;
 use App\controllers\ContactController;
 use App\controllers\HomeController;
 use App\controllers\InvoicesController;
-use App\controllers\RegisterController;
-use App\controllers\ConnectController;
+use App\controllers\ConnexionController;
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -17,7 +16,7 @@ switch ($url) {
         $home->index();
         break;
     case '/connect':
-        $sign = new ConnectController();
+        $sign = new ConnexionController();
         $sign->index();
         break;
     case '/contacts':
@@ -45,8 +44,8 @@ switch ($url) {
         $company->create();
         break;
     case '/register':
-        $register = new RegisterController();
-        $register->index();
+        $register = new ConnexionController();
+        $register->create();
         break;
     default:
         require('views/notFound.php');

@@ -3,10 +3,13 @@
 use App\core\GetFormData;
 
 require '../core/classes/GetFormData.php';
+require '../core/classes/LoginProcessing.php';
 
 if (isset($_POST['submit_login_form'])) {
     $login = new GetFormData($_POST);
 
-    echo $login->post->user_password . "<br>";
-    echo $login->post->user_email . "<br>";
+    $test = new \App\core\LoginProcessing($login);
+
+    echo $test->getFormData->post->user_email;
+    echo $test->getFormData->post->user_password;
 }
