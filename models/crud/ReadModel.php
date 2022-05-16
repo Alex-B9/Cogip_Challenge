@@ -17,9 +17,10 @@ class ReadModel
 
     public function getAllUsers()
     {
-        $sql = "SELECT * FROM cogip";
+        $sql = "SELECT * FROM `people`";
 
         $stmt = $this->db->prepare($sql);
-        return $stmt->execute();
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 }

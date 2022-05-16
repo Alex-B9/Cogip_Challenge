@@ -2,8 +2,8 @@
 
 use App\core\GetFormData;
 
-require '../core/classes/GetFormData.php';
-require '../core/classes/LoginProcessing.php';
+require '../core/GetFormData.php';
+require '../core/LoginProcessing.php';
 
 if (isset($_POST['Submit'])) {
     $login = new GetFormData($_POST);
