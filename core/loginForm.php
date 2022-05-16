@@ -1,16 +1,15 @@
 <?php
 
 use App\core\GetFormData;
-use App\core\LoginProcessing;
 
 require '../core/classes/GetFormData.php';
 require '../core/classes/LoginProcessing.php';
 
-if (isset($_POST['submit_login_form'])) {
-
+if (isset($_POST['Submit'])) {
     $login = new GetFormData($_POST);
-    $userLogin = new LoginProcessing($login);
 
-    echo $userLogin->getFormData->post->user_email;
-    echo $userLogin->getFormData->post->user_password;
+    $test = new \App\core\LoginProcessing($login);
+
+    echo $test->getFormData->post->userEmail;
+    echo $test->getFormData->post->userPassword;
 }

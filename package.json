@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home/home.css",
+    "sassContactNew" : "sass --watch sass/pages/mainContactNew.scss:public/styles/pages/contactNew/contactNew.css",
+    "sassCompanyNew" : "sass --watch sass/pages/mainCompanyNew.scss:public/styles/pages/companyNew/companyNew.css",
+    "sassRegister": "sass --watch sass/pages/mainRegister.scss:public/styles/pages/register/register.css",
     "sassConnect": "sass --watch sass/pages/mainConnect.scss:public/styles/pages/connect/connect.css"
   },
   "repository": {

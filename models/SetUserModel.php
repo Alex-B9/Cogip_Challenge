@@ -4,6 +4,8 @@ namespace App\models;
 
 class SetUserModel
 {
+    private
+
     private $firstname;
     private $lastname;
     private $email;
@@ -28,5 +30,10 @@ class SetUserModel
     public function setPassword($password)
     {
         $this->password = htmlspecialchars(password_hash($password, PASSWORD_DEFAULT));
+    }
+
+    public function gotodb()
+    {
+        $this->email
     }
 }

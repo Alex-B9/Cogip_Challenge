@@ -1,6 +1,6 @@
 <header>
     <nav class='navbarContainer'>
-        <a href="./"><img src="./public/assets/Logo.png" alt="logo"></a>
+        <a href="./"><img src="../../public/assets/img/Logo.png" alt="logo"></a>
         <div class='linksContainer'>
             <ul>
                 <li><a href='/'>Accueil</a></li>

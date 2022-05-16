@@ -30,7 +30,9 @@ class LoginProcessing
     public function  createNewUser()
     {
         $user =  new SetUserModel();
-
+      /*  if ($this->nameIsValid($this->getFormData->post->userName))
+        {
+        }*/
         $user->setFirstname($this->getFormData->post->userFirstname);
         $user->setLastname($this->getFormData->post->userLastname);
         $user->setEmail($this->getFormData->post->userEmail);
@@ -42,5 +44,10 @@ class LoginProcessing
     private function userExist()
     {
         // check if user exist in database, if it exist return true else false...
+    }
+
+    private function nameIsValid($name)
+    {
+
     }
 }
