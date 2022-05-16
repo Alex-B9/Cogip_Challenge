@@ -42,7 +42,7 @@ header .navbarContainer .linksContainer ul li a {
 }
 
 body {
-  background: #E5E5E5;
+  background-color: #E5E5E5;
   font-family: "Raleway", sans-serif;
   margin-left: 20px;
   margin-right: 20px;
@@ -90,14 +90,15 @@ body .addContainer .addImg {
   align-items: center;
 }
 body .addContainer .addImg img {
-  height: 400px;
-  transform: translateX(-25%);
+  height: 450px;
+  transform: scaleX(-1) translateX(25%);
 }
 body .addContainer .addForm {
   margin: 35px 90px 35px 20px;
   width: 60%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
 }
 body .addContainer .addForm .formItem {
@@ -112,12 +113,12 @@ body .addContainer .addForm .formItem label {
   margin-top: 10px;
 }
 body .addContainer .addForm .formItem input, body .addContainer .addForm .formItem select, body .addContainer .addForm .formItem option {
-  width: 100%;
-  height: 38px;
+  height: 30px;
   padding: 5px;
   background-color: #DCEDF0;
   border-radius: 10px;
   border: none;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #686868;
@@ -143,4 +144,4 @@ body .addContainer .addForm .formItem button:hover {
   transform: scale(0.9);
 }
 
-/*# sourceMappingURL=contactNew.css.map */
+/*# sourceMappingURL=new.css.map */
