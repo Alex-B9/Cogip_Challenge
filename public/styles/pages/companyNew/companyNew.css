@@ -42,16 +42,7 @@ header .navbarContainer .linksContainer ul li a {
 }
 
 body {
-  background-color: #E5E5E5;
-  font-family: "Raleway", sans-serif;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-body h1 {
-  font-family: "Inter", sans-serif;
-  text-transform: uppercase;
-  color: #FFBF1C;
-  font-size: 64px;
+  background-color: red;
 }
 
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=companyNew.css.map */
