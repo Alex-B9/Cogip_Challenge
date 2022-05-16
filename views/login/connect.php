@@ -8,7 +8,7 @@ ob_start();
 
 <?php require "views/components/navigation.php"; ?>
 
-    <h1>Bienvenue A LA COGIP</h1>
+    <h1>BIENVENUE A LA COGIP</h1>
     <break>
         <p>Bienvenue dans l'espace de connexion de la COGIP</p>
 

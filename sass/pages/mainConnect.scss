@@ -13,9 +13,20 @@ h1 {
     font-size: 40px;
     line-height: 48px;
     display: flex;
+    justify-content: center;
 
 
 color: #FFBF1C;
+}
+
+p {
+    display: flex; 
+    justify-content: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
 }
 
 .connect-container {
@@ -25,7 +36,7 @@ color: #FFBF1C;
     width: 75%;
 
     background: #FFFFFF;
-    border: 3px solid #48AFCF;
+    border: none;
     box-shadow: -23px 203px 82px rgba(0, 0, 0, 0.03), 
                 -13px 114px 69px rgba(0, 0, 0, 0.1), 
                 -6px 51px 51px rgba(0, 0, 0, 0.17), 
@@ -44,8 +55,10 @@ color: #FFBF1C;
         border-bottom-left-radius: 30px;
 
         img {
+            width: 500px;
             height: 400px;
-            transform: translateX(15%);
+            
+            transform: translate(-25%, 25%);
         }
 
     }
@@ -60,6 +73,7 @@ color: #FFBF1C;
         position: absolute;
         width: 50%;
         height: 10%;
+        
     
     }
 }
@@ -79,6 +93,7 @@ color: #FFBF1C;
 
 input {
     box-sizing: border-box;
+    border: none;
     width: 317px;
     height: 38px;
     text-align: center;
@@ -103,4 +118,10 @@ button {
                 0px 0px 1px rgba(86, 71, 6, 0.79), 
                 0px 0px 0px rgba(86, 71, 6, 0.8);
     border-radius: 24px;
+
+    cursor: pointer;
+                transition: transform 0.1s linear;
+                &:hover {
+                    transform: scale(0.9);
+                }
 }
