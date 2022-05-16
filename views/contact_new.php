@@ -11,7 +11,7 @@ require "views/components/navigation.php";
         <h2>Nouveau contact</h2>
     </div>
     <div class="addContainer">
-        <div class="addImg"><img src="../../public/assets/email.png" alt=""></div>
+        <div class="addImg"><img src="../../public/assets/img/email.png" alt=""></div>
         <form class="addForm" action="">
             <div class="formItem">
                 <label for="lastname">Prénom</label>

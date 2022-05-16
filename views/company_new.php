@@ -13,19 +13,19 @@ require "views/components/navigation.php";
     <h2>Nouvelle société</h2>
 </div>
 <div class="addContainer">
-    <div class="addImg"></div>
+    <div class="addImg"><img src="../../public/assets/img/leader.png" alt=""></div>
     <form action="" class="addForm">
         <div class="formItem">
-            <label for="name">Nom de la société</label>
-            <input type="text" id="name" name="name">
+            <label for="companyName">Nom de la société</label>
+            <input type="text" id="companyName" name="companyName">
         </div>
         <div class="formItem">
-            <label for="tva">Numéro de TVA</label>
-            <input type="text" id="tva" name="tva">
+            <label for="companyTVA">Numéro de TVA</label>
+            <input type="text" id="companyTVA" name="companyTVA">
         </div>
         <div class="formItem">
-            <label for="phone">Numéro de téléphone</label>
-            <input type="tel" id="phone" name="phone">
+            <label for="companyPhone">Numéro de téléphone</label>
+            <input type="tel" id="companyPhone" name="companyPhone">
         </div>
         <div class="formItem">
                 <label for="companyType">Type de société</label>
