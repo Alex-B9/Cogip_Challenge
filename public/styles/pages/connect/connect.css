@@ -1,11 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Bellota&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 header {
-  background-color: aqua;
   width: 100%;
+  margin-top: 25px;
+}
+header .navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .navbarContainer img {
+  width: 150px;
+}
+header .navbarContainer .linksContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+header .navbarContainer .linksContainer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+header .navbarContainer .linksContainer ul li {
+  list-style-type: none;
+  font-size: 16px;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4):hover {
+  border: 2px solid #48AFCF;
+  border-radius: 9px;
+  padding: 10px 20px;
+}
+header .navbarContainer .linksContainer ul li:last-child {
+  border: 1px solid #FFBF1C;
+  padding: 10px 20px;
+}
+header .navbarContainer .linksContainer ul li a {
+  text-decoration: none;
+  color: #1F8AAC;
 }
 
 body {
-  font-family: "Bellota", cursive;
+  font-family: "Inter", sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 130px;
 }
 
 h1 {
@@ -16,23 +55,44 @@ h1 {
   color: #FFBF1C;
 }
 
-form {
+.connect-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 927.2px;
-  height: 295.2px;
+  flex-direction: row;
+  margin: auto;
+  width: 75%;
   background: #FFFFFF;
   border: 3px solid #48AFCF;
   box-shadow: -23px 203px 82px rgba(0, 0, 0, 0.03), -13px 114px 69px rgba(0, 0, 0, 0.1), -6px 51px 51px rgba(0, 0, 0, 0.17), -1px 13px 28px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   text-align: center;
 }
+.connect-container .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  background-color: #EAF7F9;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.connect-container .img img {
+  height: 400px;
+  transform: translateX(15%);
+}
+.connect-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: absolute;
+  width: 50%;
+  height: 10%;
+}
 
 .field {
   display: flex;
+  gap: 5px;
   flex-direction: column;
   font-style: normal;
   font-weight: 400;
@@ -45,6 +105,7 @@ input {
   box-sizing: border-box;
   width: 317px;
   height: 38px;
+  text-align: center;
   background: #DCEDF0;
   border-radius: 10px;
 }

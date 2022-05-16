@@ -6,6 +6,8 @@ $pageTitle = 'Register page';
 ob_start();
 ?>
 
+    <?php require "views/components/navigation.php" ?>
+
     <h1>Sign Up</h1>
     <form method="post" action="">
         <div class="field">
