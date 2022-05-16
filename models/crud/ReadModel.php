@@ -2,9 +2,10 @@
 
 namespace App\models\crud;
 
-use App\models\Database;
-
+//use App\models\Database;
 // TEST PAS SUR QUE CA FONCTIONNE ;D
+
+use App\models\Database;
 
 class ReadModel
 {
@@ -17,7 +18,7 @@ class ReadModel
 
     public function getAllUsers()
     {
-        $sql = "SELECT * FROM dbname";
+        $sql = "SELECT * FROM people";
 
         $stmt = $this->db->prepare($sql);
         return $stmt->execute();
