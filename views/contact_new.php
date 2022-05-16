@@ -1,6 +1,7 @@
 <?php
-$pageCSS = './../public/styles/pages/contactNew/contactNew.css';
-$pageTitle = 'Ajouter contact'; // obligatoire
+$resetCss = './../public/styles/reset/reset.css';
+$pageCSS = './../public/styles/pages/new/new.css';
+$pageTitle = 'Ajouter un contact'; // obligatoire
 ob_start(); // obligatoire
 
 require "views/components/navigation.php";
@@ -11,7 +12,7 @@ require "views/components/navigation.php";
         <h2>Nouveau contact</h2>
     </div>
     <div class="addContainer">
-        <div class="addImg"><img src="../../public/assets/img/email.png" alt=""></div>
+        <div class="addImg"><img src="../../public/assets/img/email.png" alt="" id="contactNewImg"></div>
         <form class="addForm" action="">
             <div class="formItem">
                 <label for="lastname">Prénom</label>
