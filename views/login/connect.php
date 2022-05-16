@@ -2,7 +2,7 @@
 $resetCss = "public/styles/reset/reset.css";
 $pageCSS = 'public/styles/pages/connect/connect.css';
 
-$pageTitle = 'Connect page';
+$pageTitle = 'Connexion';
 ob_get_clean();
 ?>
 <?php require "views/components/navigation.php"; ?>
@@ -19,18 +19,17 @@ ob_get_clean();
         <form class="form" method= "post" action="#">
             <div class="field">
                 <label class="label">Votre identifiant</label>
-                <input class="input" type="text" name="user_email" placeholder="Enter your email" required aria-required=true aria-label="Enter your email">
+                <input class="input" type="text" id="userEmail" name="userEmail" placeholder="Enter your email" required aria-required=true aria-label="Enter your email">
             </div>
 
             <div class="field">
                 <label class="label">Votre mot de passe</label>
-                <input class="input" type="text" name="user_password" placeholder="Enter your password" required aria-required=true aria-label="Enter your password">
+                <input class="input" type="text" id="userPassword" name="userPassword" placeholder="Enter your password" required aria-required=true aria-label="Enter your password">
             </div>
 
             <div class="control">
-                <button type="submit" class="button is-link" aria-required=true aria-label="Submit">SUBMIT</button>
+                <button type="submit" name="Submit" aria-required=true aria-label="Submit">SUBMIT</button>
             </div>
-
         </form>
     </div>
 

@@ -42,6 +42,9 @@ header .navbarContainer .linksContainer ul li a {
 
 body {
   font-family: "Inter", sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 130px;
 }
 
 h1 {
@@ -57,33 +60,34 @@ h1 {
   flex-direction: row;
   margin: auto;
   width: 75%;
-  background-color: yellow;
+  background: #FFFFFF;
+  border: 3px solid #48AFCF;
+  box-shadow: -23px 203px 82px rgba(0, 0, 0, 0.03), -13px 114px 69px rgba(0, 0, 0, 0.1), -6px 51px 51px rgba(0, 0, 0, 0.17), -1px 13px 28px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  text-align: center;
 }
 .connect-container .img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 30%;
   background-color: #EAF7F9;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 .connect-container .img img {
-  transform: translateX(-25%);
+  height: 400px;
+  transform: translateX(15%);
 }
-
-form {
+.connect-container form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 25px;
   position: absolute;
-  width: 60%;
-  height: 295.2px;
-  background: #FFFFFF;
-  border: 3px solid #48AFCF;
-  box-shadow: -23px 203px 82px rgba(0, 0, 0, 0.03), -13px 114px 69px rgba(0, 0, 0, 0.1), -6px 51px 51px rgba(0, 0, 0, 0.17), -1px 13px 28px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-  text-align: center;
+  width: 50%;
+  height: 10%;
 }
 
 .field {
