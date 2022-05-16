@@ -1,11 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=Bellota&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 header {
-  background-color: aqua;
   width: 100%;
+  margin-top: 25px;
+}
+header .navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .navbarContainer img {
+  width: 150px;
+}
+header .navbarContainer .linksContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+header .navbarContainer .linksContainer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+header .navbarContainer .linksContainer ul li {
+  list-style-type: none;
+  font-size: 16px;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4):hover {
+  border: 2px solid #48AFCF;
+  border-radius: 9px;
+  padding: 10px 20px;
+}
+header .navbarContainer .linksContainer ul li:last-child {
+  border: 1px solid #FFBF1C;
+  padding: 10px 20px;
+}
+header .navbarContainer .linksContainer ul li a {
+  text-decoration: none;
+  color: #1F8AAC;
 }
 
 body {
-  font-family: "Bellota", cursive;
+  font-family: "Inter", sans-serif;
 }
 
 h1 {
@@ -16,6 +52,24 @@ h1 {
   color: #FFBF1C;
 }
 
+.connect-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 75%;
+  background-color: yellow;
+}
+.connect-container .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  background-color: #EAF7F9;
+}
+.connect-container .img img {
+  transform: translateX(-25%);
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -23,7 +77,7 @@ form {
   justify-content: center;
   gap: 25px;
   position: absolute;
-  width: 927.2px;
+  width: 60%;
   height: 295.2px;
   background: #FFFFFF;
   border: 3px solid #48AFCF;

@@ -10,22 +10,29 @@ ob_get_clean();
     <break>
     <p>Bienvenue dans l'espace de connexion de la COGIP</p>
 
-    <form method= "post" action="#">
-        <div class="field">
-            <label class="label">Votre identifiant</label>
-            <input class="input" type="text" name="user_email" placeholder="Enter your email" required aria-required=true aria-label="Enter your email">
-        </div>
+    <div class="connect-container">
+        <div class="img">
+            <img src="./public/assets/img/data-security-1.png" alt="logo-security">
+        <div>
+    
 
-        <div class="field">
-            <label class="label">Votre mot de passe</label>
-            <input class="input" type="text" name="user_password" placeholder="Enter your password" required aria-required=true aria-label="Enter your password">
-        </div>
+        <form class="form" method= "post" action="#">
+            <div class="field">
+                <label class="label">Votre identifiant</label>
+                <input class="input" type="text" name="user_email" placeholder="Enter your email" required aria-required=true aria-label="Enter your email">
+            </div>
 
-        <div class="control">
-            <button type="submit" class="button is-link" aria-required=true aria-label="Submit">SUBMIT</button>
-        </div>
+            <div class="field">
+                <label class="label">Votre mot de passe</label>
+                <input class="input" type="text" name="user_password" placeholder="Enter your password" required aria-required=true aria-label="Enter your password">
+            </div>
 
-    </form>
+            <div class="control">
+                <button type="submit" class="button is-link" aria-required=true aria-label="Submit">SUBMIT</button>
+            </div>
+
+        </form>
+    </div>
 
 <?php
 
