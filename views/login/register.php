@@ -5,8 +5,9 @@ $pageCSS = 'public/styles/pages/register/register.css';
 $pageTitle = 'Register page';
 ob_start();
 ?>
-
-    <h1>Sign Up</h1>
+<?php require "views/components/navigation.php"; ?>
+    <h1>Enregistrer-vous</h1>
+    <h4>Veuillez remplir le formulaire afin de vous inscrire</h4>
     <form method="post" action="">
         <div class="field">
             <label class="label">Firstname</label>
