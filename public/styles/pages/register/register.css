@@ -1,28 +1,67 @@
+header {
+  width: 100%;
+  margin-top: 25px;
+}
+header .navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .navbarContainer img {
+  width: 150px;
+}
+header .navbarContainer .linksContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+header .navbarContainer .linksContainer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+header .navbarContainer .linksContainer ul li {
+  list-style-type: none;
+  font-size: 16px;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4):hover {
+  border: 2px solid #48AFCF;
+  border-radius: 9px;
+}
+header .navbarContainer .linksContainer ul li:last-child {
+  border: 1px solid #FFBF1C;
+  padding: 10px 20px;
+}
+header .navbarContainer .linksContainer ul li a {
+  text-decoration: none;
+  color: #1F8AAC;
+}
+
+@font-face {
+  font-family: "Inter regular";
+  src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+}
+@font-face {
+  font-family: "Inter extrabold";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+}
 input, label {
   font-family: "roboto", sans-serif;
 }
 
 h1 {
-  font-weight: 800;
+  margin-left: 200px;
   font-size: 40px;
-  line-height: 48px;
   display: flex;
+  font-family: "Inter extrabold", sans-serif;
   color: #FFBF1C;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 927.2px;
-  height: 295.2px;
-  background: #FFFFFF;
-  border: 3px solid #48AFCF;
-  box-shadow: -23px 203px 82px rgba(0, 0, 0, 0.03), -13px 114px 69px rgba(0, 0, 0, 0.1), -6px 51px 51px rgba(0, 0, 0, 0.17), -1px 13px 28px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-  text-align: center;
+h4 {
+  margin-left: 200px;
+  color: #242424;
+  font-family: "Inter regular", sans-serif;
 }
 
 .field {
@@ -30,7 +69,8 @@ form {
   flex-direction: column;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 15px;
+  margin-bottom: 20px;
   line-height: 23px;
   color: #414141;
 }

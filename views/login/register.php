@@ -6,8 +6,15 @@ $pageTitle = 'Register page';
 ob_start();
 ?>
 <?php require "views/components/navigation.php"; ?>
+<div class=register_titre>
     <h1>Enregistrer-vous</h1>
     <h4>Veuillez remplir le formulaire afin de vous inscrire</h4>
+</div>
+<div class=container-form>
+    <div class="container-left">
+        <img src="" alt="">
+    </div>
+    <div class="container-right">
     <form method="post" action="">
         <div class="field">
             <label class="label">Firstname</label>
@@ -36,7 +43,7 @@ ob_start();
         </div>
 
     </form>
-
+</div>
 <?php
 
 $pageContent = ob_get_clean();
