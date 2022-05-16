@@ -1,7 +1,7 @@
 <?php
 
 $pageTitle = 'Home page';
-ob_get_clean();
+ob_start();
 ?>
 
     <h1>Register account</h1>
