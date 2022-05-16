@@ -1,11 +1,14 @@
 <?php
-// optionnel :: $pageCSS = '../prout.css';
+$pageCSS = './../public/styles/pages/home/home.css';
 $pageTitle = 'Home page'; // obligatoire
 ob_start(); // obligatoire
+
+require "views/components/navigation.php";
+
 ?>
 
-    <h1>Home page</h1>
-    <p>Hello world !</p>
+    <h1>Bienvenue à la COGIP</h1>
+    <h2>Bonjour !</h2>
 
 <?php
 
