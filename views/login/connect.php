@@ -21,6 +21,8 @@ ob_get_clean();
             <input class="input" type="text" name="user_password" placeholder="Enter your password" required aria-required=true aria-label="Enter your password">
         </div>
 
+            <a href="register">Pas encore inscrit ? Cliquez ici</a>
+
         <div class="control">
             <button type="submit" name="submit_login_form" class="button is-link" aria-required=true aria-label="Submit">SUBMIT</button>
         </div>
