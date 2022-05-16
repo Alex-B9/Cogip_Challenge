@@ -1,10 +1,12 @@
 <?php
 
+//namespace App\core;
+
 use App\core\GetFormData;
 use App\core\LoginProcessing;
 
-//require '../core/classes/GetFormData.php';
-//require '../core/classes/LoginProcessing.php';
+require '../core/GetFormData.php';
+require '../core/LoginProcessing.php';
 
 if (isset($_POST['Submit'])) {
     $login = new GetFormData($_POST);
