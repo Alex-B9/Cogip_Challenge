@@ -2,9 +2,6 @@
 
 namespace App\models\crud;
 
-//use App\models\Database;
-// TEST PAS SUR QUE CA FONCTIONNE ;D
-
 use App\models\Database;
 
 class ReadModel

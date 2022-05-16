@@ -3,22 +3,33 @@
 namespace App\models\crud;
 
 use App\models\Database;
+use App\models\GetUserModel;
 
 class UpdateModel
 {
     private $db;
-    public $email;
 
-    public function __construct()
+    private $user;
+
+    public function __construct(GetUserModel $getUserModel)
     {
         $this->db=Database::connect();
+        $this->user = $getUserModel;
     }
 
-    public function UpdateUser()
+    public function UpdateUserMail($newEmail)
     {
-        if (isset($_POST['submit']))
-        {
-            $sql = "UPDATE `people` SET `PeopleId`='[value-1]',`firstname`='[value-2]',`lastname`='[value-3]',`email`='[value-4]' WHERE `email` = $this->email";
-        }
+            $sql = "UPDATE `people` SET `email`='{$newEmail}' WHERE `email` = {$this->user->getEmail()}  ";
+            $stmt = $this->db->prepare($sql);
+            return $stmt->execute();
+    }
+
+    public function UpdateUserPass($newPass)
+    {
+            $newPass = htmlspecialchars(password_hash($newPass, PASSWORD_DEFAULT));
+
+            $sql = "UPDATE `people` SET `password`='{$newPass}' WHERE `email` = {$this->user->getEmail()}  ";
+            $stmt = $this->db->prepare($sql);
+            return $stmt->execute();
     }
 }
