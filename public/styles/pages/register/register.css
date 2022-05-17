@@ -41,6 +41,10 @@ header .navbarContainer .linksContainer ul li a {
   color: #1F8AAC;
 }
 
+input, label {
+  font-family: "roboto", sans-serif;
+}
+
 .register-titre {
   display: flex;
   flex-direction: column;
