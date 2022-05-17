@@ -78,28 +78,27 @@ body .detailsContainer {
   margin-right: auto;
   line-height: normal;
 }
-body .detailsContainer .contactInfo p {
+body .detailsContainer .info p {
   font-weight: 700;
   font-size: 16px;
 }
-body .detailsContainer .contactInfo p span {
+body .detailsContainer .info p span {
   font-weight: 400;
 }
-body .detailsContainer .contactInvoices {
+body .detailsContainer .tableContainer {
   margin-top: 50px;
 }
-body .detailsContainer .contactInvoices h3 {
+body .detailsContainer .tableContainer h3 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
 }
-body .detailsContainer .contactInvoices .contactInvoicesTable {
-  width: 75%;
+body .detailsContainer .tableContainer .tableItem {
   border-collapse: collapse;
   text-align: left;
 }
-body .detailsContainer .contactInvoices .contactInvoicesTable th {
+body .detailsContainer .tableContainer .tableItem th {
   border: 1px solid #AAAAAA;
   background: #48AFCF;
   padding: 16px;
@@ -108,7 +107,7 @@ body .detailsContainer .contactInvoices .contactInvoicesTable th {
   font-weight: 700;
   font-size: 16px;
 }
-body .detailsContainer .contactInvoices .contactInvoicesTable td {
+body .detailsContainer .tableContainer .tableItem td {
   padding: 16px;
   border: 1px solid #AAAAAA;
 }
