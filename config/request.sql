@@ -55,6 +55,7 @@ CREATE TABLE IF NOT EXISTS `people` (
                                         `firstname` varchar(20) NOT NULL,
                                         `lastname` varchar(20) NOT NULL,
                                         `email` varchar(50) NOT NULL,
+                                        `password` varchar(255) NOT NULL,
                                         PRIMARY KEY (`PeopleId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

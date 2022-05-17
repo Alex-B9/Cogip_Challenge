@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home/home.css",
+<<<<<<< HEAD
     "sassContactNew" : "sass --watch sass/pages/mainContactNew.scss:public/styles/pages/contactNew/contactNew.css"
+=======
+    "sassRegister": "sass --watch sass/pages/mainRegister.scss:public/styles/pages/register/register.css",
+    "sassNew" : "sass --watch sass/pages/mainNew.scss:public/styles/pages/new/new.css",
+    "sassConnect": "sass --watch sass/pages/mainConnect.scss:public/styles/pages/connect/connect.css"
+>>>>>>> 8a5497a7af6ae3e966759ba3b73828760a28d89d
   },
   "repository": {
     "type": "git",
