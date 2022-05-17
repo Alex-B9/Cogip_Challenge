@@ -1,7 +1,7 @@
 <?php
 
 $pageTitle = 'Home page';
-ob_get_clean();
+ob_start();
 ?>
     <?php require "views/components/navigation.php" ?>
 
