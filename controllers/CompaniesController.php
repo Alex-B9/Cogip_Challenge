@@ -19,4 +19,9 @@ class CompaniesController extends Controller
     {
         require $this->view('company_new');
     }
+
+    public function show()
+    {
+        require $this->view('company_details');
+    }
 }

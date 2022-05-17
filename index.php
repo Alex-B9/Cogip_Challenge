@@ -27,6 +27,10 @@ switch ($url) {
         $contact = new ContactController();
         $contact->create();
         break;
+    case '/contact-details':
+        $contact = new ContactController();
+        $contact->show();
+        break;
     case '/invoices':
         $invoices = new InvoicesController();
         $invoices->index();
@@ -35,6 +39,10 @@ switch ($url) {
         $invoice = new InvoicesController();
         $invoice->create();
         break;
+    case '/invoice-details':
+        $invoice = new InvoicesController();
+        $invoice->show();
+        break;
     case '/companies':
         $companies = new CompaniesController();
         $companies->index();
@@ -42,6 +50,10 @@ switch ($url) {
     case '/company-new':
         $company = new CompaniesController();
         $company->create();
+        break;
+    case '/company-details':
+        $company = new CompaniesController();
+        $company->show();
         break;
     case '/register':
         $register = new ConnexionController();

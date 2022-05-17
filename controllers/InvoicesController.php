@@ -19,4 +19,9 @@ class InvoicesController extends Controller
     {
         require $this->view('invoice_new');
     }
+
+    public function show()
+    {
+        require $this->view('invoice_details');
+    }
 }
