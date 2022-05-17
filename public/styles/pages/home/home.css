@@ -27,14 +27,18 @@ header .navbarContainer .linksContainer ul li {
   list-style-type: none;
   font-size: 16px;
 }
-header .navbarContainer .linksContainer ul li a {
-  text-decoration: none;
-  color: #1F8AAC;
-}
-header .navbarContainer .linksContainer ul li a:hover {
+header .navbarContainer .linksContainer ul li:nth-child(-n+4):hover {
   border: 2px solid #48AFCF;
   border-radius: 9px;
   padding: 10px 20px;
+}
+header .navbarContainer .linksContainer ul li:last-child {
+  border: 1px solid #FFBF1C;
+  padding: 10px 20px;
+}
+header .navbarContainer .linksContainer ul li a {
+  text-decoration: none;
+  color: #1F8AAC;
 }
 
 body {
