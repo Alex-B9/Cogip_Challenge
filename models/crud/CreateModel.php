@@ -13,7 +13,7 @@ class CreateModel
         $this->db=Database::connect();
     }
 
-    public function createUser($firstname, $lastname, $email,$password)
+    public function createUser($firstname, $lastname, $email ,$password)
     {
             $sql = "INSERT INTO people (`PeopleId`,`firstname`, `lastname`, `email`, `password`) VALUES (0,'$firstname','$lastname','$email', '$password')";
             $stmt = $this->db->prepare($sql);
