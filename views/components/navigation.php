@@ -7,7 +7,7 @@
                 <li><a href='/invoices'>Factures</a></li>
                 <li><a href='/companies'>Sociétés</a></li>
                 <li><a href='/contacts'>Contacts</a></li>
-                <li><a href='/connexion'>Connexion</a></li>
+                <li><a href='/connect'>Connexion</a></li>
             </ul>
         </div>
     </nav>

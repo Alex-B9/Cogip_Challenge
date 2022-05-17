@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home/home.css"
+    "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home/home.css",
+    "sassRegister": "sass --watch sass/pages/mainRegister.scss:public/styles/pages/register/register.css",
+    "sassNew" : "sass --watch sass/pages/mainNew.scss:public/styles/pages/new/new.css",
+    "sassConnect": "sass --watch sass/pages/mainConnect.scss:public/styles/pages/connect/connect.css"
   },
   "repository": {
     "type": "git",
