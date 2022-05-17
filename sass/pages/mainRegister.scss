@@ -1,18 +1,21 @@
 @import '../components/navigation.scss';
 
 
-@font-face {
-    font-family:'Inter regular' ;
-    src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-}
-@font-face {
-    font-family:'Inter extrabold' ;
-    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
-}
-@font-face {
-    font-family: 'Inter bold';
-    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-}
+// @font-face {
+//     font-family:'Inter regular' ;
+//     src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+// }
+// @font-face {
+//     font-family:'Inter extrabold' ;
+//     src: url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+// }
+// @font-face {
+//     font-family: 'Inter bold';
+//     src: url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+// }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
 // input,label{
 //     font-family: 'roboto',sans-serif;   
@@ -30,7 +33,7 @@
     .soustitre-register{
     margin-right: 220px;
     color:#525252;
-    font-family: 'Inter regular',sans-serif;
+    font-family: 'Inter',sans-serif;
     font-size: 26px;
     letter-spacing: 3px;
     
@@ -38,7 +41,8 @@
  
 font-size: 70px;
 display: flex;
-font-family: 'Inter extrabold', sans-serif;
+font-family: 'Inter', sans-serif;
+font-weight: 800;
 color: #FFBF1C;
 letter-spacing:1px;
 margin-right:370px;
@@ -76,7 +80,8 @@ button {
     justify-content: center;
     width: 147px;
     height: 41px;
-    font-family: 'Inter extrabold', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     background: #FFB800;
     color: white;
     border: none;
