@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 input,label{
     font-family: 'roboto',sans-serif;   
@@ -41,8 +42,9 @@ margin-right:370px;
     display: flex ;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 15px;
-    font-family: 'roboto',sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Roboto',sans-serif;
     margin-bottom:17px;
     // line-height: 23px;
     color: #414141;
