@@ -27,7 +27,7 @@ class LoginProcessing
         $this->readUserDB->getAllUsers();
     }
 
-    public function  createNewUser()
+    public function  createNewUser(): string
     {
         $userFirstname = $this->getFormData->post->userFirstname;
         $userLastname = $this->getFormData->post->userLastname;
@@ -47,7 +47,7 @@ class LoginProcessing
             return 'Infos incorrect';
     }
 
-    private function userExist()
+    private function userExist(): bool
     {
         // check if user exist in database, if it exist return true else false...
         $user = new ReadModel();
@@ -65,9 +65,7 @@ class LoginProcessing
 
     private function nameIsValid($name): string
     {
-//        return (preg_match('^[a-z0-9_-]{3,20}$', $name)) ? $name = trim
-//        ($name) stripslashes($name) : 'Error : incorrect name';
-        if (preg_match('^[a-z0-9_-]{3,20}$', $name))
+        if (preg_match('/^[a-zA-Z]{0,20}$/', $name))
         {
             $name = trim($name);
             return stripslashes($name);
@@ -77,16 +75,13 @@ class LoginProcessing
 
     private function emailIsValid($email): string
     {
-//        $emailValidationRegex = "/^[a-z\d!#$%&'*+\\/=?^_`{|}~-]+(?:\\.[a-z\d!#$%&'*+\\/=?^_`{|}~-]+)*@(?:[a-z\d](?:[a-z\d-]*[a-z\d])?\\.)+[a-z\d](?:[a-z\d-]*[a-z\d]){3,20}?$/";
-
-        return (!preg_match("/^[a-z\d!#$%&'*+\\/=?^_`{|}~-]+(?:\\.[a-z\d!#$%&'*+\\/=?^_`{|}~-]+)*@(?:[a-z\d](?:[a-z\d-]*[a-z\d])?\\.)+[a-z\d](?:[a-z\d-]*[a-z\d]){3,20}?$/", $email)) ? FALSE : TRUE;
-//        '/^\\S+@\\S+\\.\\S+$/'
-
+        return !!preg_match("/^[a-zA-Z\d.,&’_~-]{3,20}+@[a-zA-Z]{3,15}+\.[a-zA-Z]{2,6}+$/",
+            $email);
     }
 
     private function passwordIsValid($password): string
     {
-        if (preg_match('^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$', $password))
+        if (preg_match('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?\d)(?=.*?[#?!@$ %&*-]).{8,}$', $password))
         {
             return trim($password);
         }
