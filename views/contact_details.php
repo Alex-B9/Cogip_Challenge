@@ -16,6 +16,7 @@ require "views/components/navigation.php";
     <div class="contactInfo">
         <p>Société : <span id="contactCompany">nom de la société</span></p>
         <p>Email : <span id="contactEmail">email du contact</span></p>
+        <!-- Ajouter <a href="mailto:" ? -->
         <p>Numéro de téléphone : <span id="contactPhone">numéro de téléphone du contact</span></p>
     </div>
     <div class="contactInvoices">
@@ -34,6 +35,9 @@ require "views/components/navigation.php";
                 <td id="contactInvoiceDate">18/05/2022</td>
             </tr>
         </table>
+    </div>
+    <div class="backBtn">
+        <button><a href="/contacts">Retour</a></button>
     </div>
 </div>
 

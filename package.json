@@ -7,7 +7,8 @@
     "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home/home.css",
     "sassRegister": "sass --watch sass/pages/mainRegister.scss:public/styles/pages/register/register.css",
     "sassNew" : "sass --watch sass/pages/mainNew.scss:public/styles/pages/new/new.css",
-    "sassConnect": "sass --watch sass/pages/mainConnect.scss:public/styles/pages/connect/connect.css"
+    "sassConnect": "sass --watch sass/pages/mainConnect.scss:public/styles/pages/connect/connect.css",
+    "sassDetails": "sass --watch sass/pages/mainDetails.scss:public/styles/pages/details/details.css"
   },
   "repository": {
     "type": "git",
