@@ -6,13 +6,14 @@ $pageTitle = 'Register page';
 ob_start();
 ?>
 <?php require "views/components/navigation.php"; ?>
-<div class=register_titre>
-    <h1>Enregistrer-vous</h1>
-    <h4>Veuillez remplir le formulaire afin de vous inscrire</h4>
+<div class=register-titre>
+    <h1>S'enregister</h1>
+    <p class="soustitre-register">Remplissez attentivement le formulaire</p>
 </div>
+<div class="container-form-pos">
 <div class=container-form>
     <div class="container-left">
-        <img src="" alt="">
+        <img class="img-register" src="../../public/assets/img/register.png" alt="register image">
     </div>
     <div class="container-right">
     <form method="post" action="">
@@ -43,6 +44,7 @@ ob_start();
         </div>
 
     </form>
+</div>
 </div>
 <?php
 
