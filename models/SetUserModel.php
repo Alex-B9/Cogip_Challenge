@@ -12,10 +12,7 @@ class SetUserModel
     private $password;
     private $DbCreate;
 
-    public function __construct()
-    {
-        $this->DbCreate = new CreateModel();
-    }
+
 
     public function setFirstname($firstname): SetUserModel
     {
@@ -47,6 +44,8 @@ class SetUserModel
 
     public function dbSetUser()
     {
-        $this->DbCreate->createUser($this->firstname, $this->lastname, $this->email, $this->password);
+        $DbCreate = new CreateModel();
+        $DbCreate->createUser($this->firstname, $this->lastname,
+            $this->email, $this->password);
     }
 }

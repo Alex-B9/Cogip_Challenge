@@ -6,6 +6,10 @@ use App\models\crud\ReadModel;
 use App\models\GetUserModel;
 use App\models\SetUserModel;
 
+//require '../models/SetUserModel.php';
+//require '../models/GetUserModel.php';
+//require '../models/crud/ReadModel.php';
+
 class LoginProcessing
 {
     public $getFormData;
@@ -41,6 +45,8 @@ class LoginProcessing
             $user->setLastname($userLastname);
             $user->setEmail($userEmail);
             $user->setPassword($userPassword);
+
+            $user->dbSetUser();
         }
         return 'Infos incorrect';
     }

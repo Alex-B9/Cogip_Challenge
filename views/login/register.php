@@ -16,7 +16,7 @@ ob_start();
         <img class="img-register" src="../../public/assets/img/register.png" alt="register image">
     </div>
     <div class="container-right">
-    <form method="post" action="">
+    <form method="post" action="../../core/registerForm.php">
         <div class="field">
             <label class="label">Firstname</label>
             <input class="input" type="text" name="registerFirstname" placeholder="Enter your firstname" required aria-required=true aria-label="Enter your firstname">
@@ -25,6 +25,7 @@ ob_start();
         <div class="field">
             <label class="label">Lastname</label>
             <input class="input" type="text" name="registerLastname" placeholder="Enter your lastname" required aria-required=true aria-label="Enter your lastname">
+<!--            --><?//=(isset(errmess)) ? $errmess  ?>
         </div>
 
         <div class="field">
