@@ -19,4 +19,9 @@ class ContactController extends Controller
     {
         require $this->view('contact_new');
     }
+
+    public function show()
+    {
+        require $this->view('contact_details');
+    }
 }
