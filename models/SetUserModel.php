@@ -6,13 +6,10 @@ use App\models\crud\CreateModel;
 
 class SetUserModel
 {
-    private $firstname;
-    private $lastname;
-    private $email;
-    private $password;
-    private $DbCreate;
-
-
+    private string $firstname;
+    private string $lastname;
+    private string $email;
+    private string $password;
 
     public function setFirstname($firstname): SetUserModel
     {

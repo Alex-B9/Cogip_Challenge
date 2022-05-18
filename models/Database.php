@@ -29,7 +29,7 @@ class Database
     public static function connect()
     {
         if (is_null(self::$sqlPDO)) {
-            require_once("../config/db_config.php");
+            require_once("config/db_config.php");
 
             try {
                 self::$sqlPDO = new PDO("mysql:dbname=" . DB_NAME . ";host=" . DB_HOST, DB_USERNAME, DB_PASSWORD);

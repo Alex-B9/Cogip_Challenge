@@ -2,7 +2,9 @@
 
 namespace App\controllers;
 
-// pareil que home.
+use App\models\ErrorMessage;
+use App\models\SetUserModel;
+
 class ConnexionController extends Controller
 {
     public function index()
@@ -13,5 +15,63 @@ class ConnexionController extends Controller
     public function create()
     {
         require $this->view('login/register');
+    }
+
+    public function store()
+    {
+        if (isset($_POST)) {
+            $dataValidate = new ValidateData();
+
+            $firstname = $dataValidate->nameIsValid(Request::get()['registerFirstname']);
+            $lastname = $dataValidate->nameIsValid(Request::get()['registerLastname']);
+            $email = $dataValidate->emailIsValid(Request::get()['registerEmail']);
+            $password = $dataValidate->passwordIsValid(Request::get()['registerPassword']);
+
+            $user = new SetUserModel();
+            $error = new ErrorMessage();
+
+//            session_start();
+
+            if ($firstname)
+            {
+                $user->setFirstname($firstname);
+
+            } else {
+                echo $error->firstnameError();
+            }
+
+            if ($lastname)
+            {
+                // true envoie db
+                $user->setLastname($lastname);
+
+            } else {
+                echo $error->firstnameError();
+            }
+
+            if ($email)
+            {
+                // true envoie db
+                $user->setEmail($email);
+
+            } else {
+                echo $error->firstnameError();
+            }
+
+            if ($password)
+            {
+                // true envoie db
+                $user->setPassword($password);
+
+            } else {
+                echo $error->firstnameError();
+            }
+
+            if ($firstname && $lastname && $email && $password) {
+                $user->dbSetUser();
+            } else {
+                echo $error->errorUserExist();
+            }
+        }
     }
 }

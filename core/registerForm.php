@@ -1,7 +1,8 @@
 <?php
-
-use App\core\GetFormData;
-use App\core\LoginProcessing;
+/*
+use \App\core\GetFormData;
+use \App\core\LoginProcessing;
+use \App\models\SetUserModel;
 
 require ('../core/GetFormData.php');
 require ('../core/LoginProcessing.php');
@@ -17,6 +18,7 @@ if (isset($_POST['submitRegister']))
     echo $reg->getFormData->post->registerEmail;
     echo $reg->getFormData->post->registerPassword;
 
-    $reg->createNewUser();
+    $user = new SetUserModel();
+    $reg->createNewUser($user);
 
-}
+}*/

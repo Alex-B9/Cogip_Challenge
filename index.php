@@ -59,6 +59,10 @@ switch ($url) {
         $register = new ConnexionController();
         $register->create();
         break;
+    case '/register-new':
+        $register = new ConnexionController();
+        $register->store();
+        break;
     default:
         require('views/notFound.php');
 }

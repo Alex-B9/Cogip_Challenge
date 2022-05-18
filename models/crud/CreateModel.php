@@ -6,7 +6,7 @@ use App\models\Database;
 
 class CreateModel
 {
-    private  $db;
+    private $db;
 
     public function __construct()
     {
