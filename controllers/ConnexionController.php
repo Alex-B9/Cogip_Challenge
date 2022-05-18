@@ -46,7 +46,7 @@ class ConnexionController extends Controller
                 $user->setLastname($lastname);
 
             } else {
-                echo $error->firstnameError();
+                echo $error->lastnameError();
             }
 
             if ($email)
@@ -55,7 +55,7 @@ class ConnexionController extends Controller
                 $user->setEmail($email);
 
             } else {
-                echo $error->firstnameError();
+                echo $error->emailError();
             }
 
             if ($password)
@@ -64,7 +64,7 @@ class ConnexionController extends Controller
                 $user->setPassword($password);
 
             } else {
-                echo $error->firstnameError();
+                echo $error->passwordError();
             }
 
             if ($firstname && $lastname && $email && $password) {

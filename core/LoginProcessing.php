@@ -83,15 +83,9 @@ class LoginProcessing
     {
 //        return (preg_match('^[a-z0-9_-]{3,20}$', $name)) ? $name = trim
 //        ($name) stripslashes($name) : 'Error : incorrect name';
-        if (!preg_match('^[a-z0-9_-]{3,20}$', $name))
-        {
-            return FALSE;
-        }
+        return (!preg_match('/^[a-zA-Z]{3,20}$/', $name)) ? FALSE : stripslashes($name);
 
-        $name = trim($name);
-        return stripslashes($name);
     }
-
     private function emailIsValid($email): string
     {
 //        $emailValidationRegex = "/^[a-z\d!#$%&'*+\\/=?^_`{|}~-]+(?:\\.[a-z\d!#$%&'*+\\/=?^_`{|}~-]+)*@(?:[a-z\d](?:[a-z\d-]*[a-z\d])?\\.)+[a-z\d](?:[a-z\d-]*[a-z\d]){3,20}?$/";
@@ -103,11 +97,7 @@ class LoginProcessing
 
     private function passwordIsValid($password): string
     {
-        if (!preg_match('^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$', $password))
-        {
-            return FALSE;
-        }
-
-        return trim($password);
+        return (!preg_match('/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*\d)(?=\S*[-_*/!?])\S*$/', $password)) ?  FALSE : trim($password); // 1Maj,1min,8charac,1num,
+        //1special charac
     }
 }
