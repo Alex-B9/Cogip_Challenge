@@ -7,6 +7,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+        echo phpversion();
         require $this->view('home');
     }
 }

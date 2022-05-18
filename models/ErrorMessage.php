@@ -26,6 +26,6 @@ class ErrorMessage
 
     public function errorUserExist(): string
     {
-        return "Error: ";
+        return "Error: incorrect information !";
     }
 }

@@ -39,7 +39,7 @@ class SetUserModel
         return $this;
     }
 
-    public function dbSetUser()
+    public function dbSetUser(): void
     {
         $DbCreate = new CreateModel();
         $DbCreate->createUser($this->firstname, $this->lastname,

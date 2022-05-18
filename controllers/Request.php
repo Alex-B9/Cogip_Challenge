@@ -4,9 +4,9 @@ namespace App\controllers;
 
 class Request
 {
-    public static $data;
+    public static array $data;
 
-    public static function get()
+    public static function get(): array
     {
         return self::$data = $_POST;
     }

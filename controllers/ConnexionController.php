@@ -30,8 +30,6 @@ class ConnexionController extends Controller
             $user = new SetUserModel();
             $error = new ErrorMessage();
 
-//            session_start();
-
             if ($firstname)
             {
                 $user->setFirstname($firstname);
@@ -42,7 +40,6 @@ class ConnexionController extends Controller
 
             if ($lastname)
             {
-                // true envoie db
                 $user->setLastname($lastname);
 
             } else {
@@ -51,7 +48,6 @@ class ConnexionController extends Controller
 
             if ($email)
             {
-                // true envoie db
                 $user->setEmail($email);
 
             } else {
@@ -60,7 +56,6 @@ class ConnexionController extends Controller
 
             if ($password)
             {
-                // true envoie db
                 $user->setPassword($password);
 
             } else {
