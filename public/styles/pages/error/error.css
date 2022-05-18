@@ -43,33 +43,15 @@ header .navbarContainer .linksContainer ul li a {
 
 body {
   font-family: "Raleway", sans-serif;
+  color: #373737;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 130px;
   line-height: 5px;
 }
-body .titleContainer {
+body .errorContainer {
   margin-top: 90px;
-  margin-bottom: 50px;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
-body .titleContainer h1 {
-  text-transform: uppercase;
-  color: #FFBF1C;
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 40px;
-}
-body .titleContainer h2 {
-  text-transform: uppercase;
-  color: #FFBF1C;
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 48px;
-}
-body .addContainer {
+  padding: 20px;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -79,56 +61,37 @@ body .addContainer {
   display: flex;
   flex-direction: row;
 }
-body .addContainer .addImg {
-  width: 40%;
-  background-color: #EAF7F9;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .addContainer .addImg img {
-  height: 450px;
-  transform: scaleX(-1) translateX(25%);
-}
-body .addContainer .addForm {
-  margin: 35px 90px 35px 20px;
+body .errorContainer .imgContainer {
   width: 60%;
+}
+body .errorContainer .imgContainer img {
+  height: 400px;
+  transform: translateX(-25%);
+}
+body .errorContainer .errorInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
 }
-body .addContainer .addForm .formItem {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+body .errorContainer .errorInfo .titleContainer h1 {
+  text-transform: uppercase;
+  color: #FFBF1C;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 60px;
 }
-body .addContainer .addForm .formItem label {
-  font-weight: 400;
-  font-size: 20px;
-  color: #414141;
-  margin-top: 10px;
+body .errorContainer .errorInfo .titleContainer h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: normal;
 }
-body .addContainer .addForm .formItem input, body .addContainer .addForm .formItem select, body .addContainer .addForm .formItem option {
-  height: 30px;
-  padding: 5px;
-  background-color: #DCEDF0;
-  border-radius: 10px;
-  border: none;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #686868;
-}
-body .addContainer .addForm .formItem button {
+body .errorContainer .errorInfo button {
   background-color: #FFBF1C;
   border: none;
   box-shadow: -2px 10px 3px rgba(86, 71, 6, 0.01), -1px 7px 3px rgba(86, 71, 6, 0.12), -1px 4px 2px rgba(86, 71, 6, 0.4), 0px 2px 2px rgba(86, 71, 6, 0.68), 0px 0px 1px rgba(86, 71, 6, 0.79), 0px 0px 0px rgba(86, 71, 6, 0.8);
-  width: 147px;
-  margin-left: auto;
-  margin-right: auto;
+  width: fit-content;
+  margin-top: 50px;
   padding: 9px 25px;
   border-radius: 24px;
   font-family: "Inter", sans-serif;
@@ -139,8 +102,14 @@ body .addContainer .addForm .formItem button {
   cursor: pointer;
   transition: transform 0.1s linear;
 }
-body .addContainer .addForm .formItem button:hover {
+body .errorContainer .errorInfo button:hover {
   transform: scale(0.9);
 }
+body .errorContainer .errorInfo button a {
+  text-decoration: none;
+}
+body .errorContainer .errorInfo button a:visited {
+  color: inherit;
+}
 
-/*# sourceMappingURL=new.css.map */
+/*# sourceMappingURL=error.css.map */

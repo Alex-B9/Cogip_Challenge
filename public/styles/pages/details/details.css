@@ -43,6 +43,7 @@ header .navbarContainer .linksContainer ul li a {
 
 body {
   font-family: "Raleway", sans-serif;
+  color: #373737;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 130px;
@@ -69,66 +70,55 @@ body .titleContainer h2 {
   font-weight: 800;
   font-size: 48px;
 }
-body .addContainer {
+body .detailsContainer {
+  margin-top: 90px;
+  margin-bottom: 50px;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #FFFFFF;
-  border-radius: 30px;
-  box-shadow: -23px 203px 82px rgba(0, 0, 0, 0.03), -13px 114px 69px rgba(0, 0, 0, 0.1), -6px 51px 51px rgba(0, 0, 0, 0.17), -1px 13px 28px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: row;
+  line-height: normal;
 }
-body .addContainer .addImg {
-  width: 40%;
-  background-color: #EAF7F9;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .addContainer .addImg img {
-  height: 450px;
-  transform: scaleX(-1) translateX(25%);
-}
-body .addContainer .addForm {
-  margin: 35px 90px 35px 20px;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
-body .addContainer .addForm .formItem {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-body .addContainer .addForm .formItem label {
-  font-weight: 400;
-  font-size: 20px;
-  color: #414141;
-  margin-top: 10px;
-}
-body .addContainer .addForm .formItem input, body .addContainer .addForm .formItem select, body .addContainer .addForm .formItem option {
-  height: 30px;
-  padding: 5px;
-  background-color: #DCEDF0;
-  border-radius: 10px;
-  border: none;
-  font-family: "Raleway", sans-serif;
+body .detailsContainer .info p {
+  font-weight: 700;
   font-size: 16px;
-  font-weight: 400;
-  color: #686868;
 }
-body .addContainer .addForm .formItem button {
+body .detailsContainer .info p span {
+  font-weight: 400;
+}
+body .detailsContainer .tableContainer {
+  margin-top: 50px;
+}
+body .detailsContainer .tableContainer h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+body .detailsContainer .tableContainer .tableItem {
+  border-collapse: collapse;
+  text-align: left;
+}
+body .detailsContainer .tableContainer .tableItem th {
+  border: 1px solid #AAAAAA;
+  background: #48AFCF;
+  padding: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+}
+body .detailsContainer .tableContainer .tableItem td {
+  padding: 16px;
+  border: 1px solid #AAAAAA;
+}
+body button {
   background-color: #FFBF1C;
   border: none;
   box-shadow: -2px 10px 3px rgba(86, 71, 6, 0.01), -1px 7px 3px rgba(86, 71, 6, 0.12), -1px 4px 2px rgba(86, 71, 6, 0.4), 0px 2px 2px rgba(86, 71, 6, 0.68), 0px 0px 1px rgba(86, 71, 6, 0.79), 0px 0px 0px rgba(86, 71, 6, 0.8);
   width: 147px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
   padding: 9px 25px;
   border-radius: 24px;
   font-family: "Inter", sans-serif;
@@ -139,8 +129,14 @@ body .addContainer .addForm .formItem button {
   cursor: pointer;
   transition: transform 0.1s linear;
 }
-body .addContainer .addForm .formItem button:hover {
+body button:hover {
   transform: scale(0.9);
 }
+body button a {
+  text-decoration: none;
+}
+body button a:visited {
+  color: inherit;
+}
 
-/*# sourceMappingURL=new.css.map */
+/*# sourceMappingURL=details.css.map */

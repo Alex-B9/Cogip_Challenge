@@ -8,12 +8,17 @@ ob_start();
 
 <?php require "views/components/navigation.php"; ?>
 
-<h1>COGIP: Liste des factures</h1>
+<div class="titleContainer">
+    <h1>COGIP</h1>
+    <h2>Liste des factures</h2>
+</div>
 
-<div class ="add"><a href="invoice_new.php"><img src="./public/assets/img/document-1.png"> Nouvelle Facture</a></div>
+<div class ="add">
+    <a href="/invoice-new"><img src="./public/assets/img/document-1.png"> Nouvelle Facture</a>
+</div>
 
-<div class="table">
-    <table>
+<div class="tableContainer">
+    <table class="tableItem">
         <thead>
             <tr>
                 <th>NUMERO DE FACTURE</th>
@@ -25,24 +30,24 @@ ob_start();
         </thead>
         <tbody>
             <tr>
-                <td>F20190404-004</td>
-                <td>04/04/2019</td>
-                <td>Jouet Jean-Michel</td>
-                <td>Fournisseur</td>
+                <td id="invoiceNbr">F20190404-004</td>
+                <td id="invoiceDate">04/04/2019</td>
+                <td id="invoiceCompany">Jouet Jean-Michel</td>
+                <td id="invoiceCompanyType">Fournisseur</td>
                 <td><img src="./public/assets/img/delete-2.png"></td>
             </tr>
             <tr>
-                <td>F20190404-003</td>
-                <td>04/04/2019</td>
-                <td>Dunder Mifflin</td>
-                <td>Client</td>
+                <td id="invoiceNbr">F20190404-003</td>
+                <td id="invoiceDate">04/04/2019</td>
+                <td id="invoiceCompany">Dunder Mifflin</td>
+                <td id="invoiceCompanyType">Client</td>
                 <td><img src="./public/assets/img/delete-2.png"></td>
             </tr>
             <tr>
-                <td>F20190404-002</td>
-                <td>04/04/2019</td>
-                <td>Pierre Cailloux</td>
-                <td>Fournisseur</td>
+                <td id="invoiceNbr">F20190404-002</td>
+                <td id="invoiceDate">04/04/2019</td>
+                <td id="invoiceCompany">Pierre Cailloux</td>
+                <td id="invoiceCompanyType">Fournisseur</td>
                 <td><img src="./public/assets/img/delete-2.png"></td>
             </tr>
         </tbody>
