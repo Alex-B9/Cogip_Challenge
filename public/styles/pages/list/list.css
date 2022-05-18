@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+header {
+  width: 100%;
+  margin-top: 25px;
+}
+header .navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .navbarContainer img {
+  width: 150px;
+}
+header .navbarContainer .linksContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+header .navbarContainer .linksContainer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+header .navbarContainer .linksContainer ul li {
+  list-style-type: none;
+  font-size: 16px;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4):hover {
+  border: 2px solid #48AFCF;
+  border-radius: 9px;
+  padding: 10px 20px;
+}
+header .navbarContainer .linksContainer ul li:last-child {
+  border: 1px solid #FFBF1C;
+  padding: 10px 20px;
+}
+header .navbarContainer .linksContainer ul li a {
+  text-decoration: none;
+  color: #1F8AAC;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 130px;
+}
+
+.add {
+  padding-left: 6%;
+  padding-bottom: 3%;
+}
+.add img {
+  width: 30px;
+  height: 35px;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  color: #FFBF1C;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 500px;
+  height: 300px;
+}
+table th {
+  background-color: #48AFCF;
+  color: white;
+  border: 1px solid #B9B9B9;
+  padding: 10px;
+}
+table td {
+  border: 1px solid #B9B9B9;
+  padding: 15px;
+}
+table tr {
+  border: 1px solid #B9B9B9;
+}
+table img {
+  width: 25px;
+  height: 25px;
+}
+
+/*# sourceMappingURL=list.css.map */
