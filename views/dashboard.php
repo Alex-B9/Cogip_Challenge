@@ -1,7 +1,7 @@
 <?php
 $resetCss = './../public/styles/reset/reset.css';
-$pageCSS = './../public/styles/pages/details/details.css';
-$pageTitle = 'Détails de la société'; // obligatoire
+$pageCSS = './../public/styles/pages/dashboard/dashboard.css';
+$pageTitle = 'Dashboard'; // obligatoire
 ob_start(); // obligatoire
 
 require "views/components/navigation.php";
@@ -13,21 +13,49 @@ require "views/components/navigation.php";
 </div>
 <div class="usersContainer">
     <div class="userItem">
-        <img src="../../public/assets/img/userUcon.png" alt="">
-        <p id="userName">Jean-Christian Ranu</p>
-        <div class="rights">
-            <input type="checkbox" id="fullRights" name="fullRights" value="fullRights">
-            <label for="fullRights">Accès complet</label>
+        <div class="userImg">
+            <img src="../../public/assets/img/userIcon.png" alt="">
         </div>
-        <div class="rights">
-            <input type="checkbox" id="addRights" name="addRights" value="addRights">
-            <label for="addRights">Ajout uniquement</label>
+        <div class="userName">
+            <p id="userName">Jean-Christian Ranu</p>
+        </div>
+        <div class="userRights">      
+            <label for="fullRights" id="fullRightsLabel">
+                <input type="checkbox" id="fullRights" class="checkbox" name="fullRights" value="fullRights" onchange="checkChange()">      
+            Accès complet</label>
+        </div>
+        <div class="userRights">
+            <label for="addRights" id="addRightsLabel">
+                <input type="checkbox" id="addRights"  class="checkbox"name="addRights" value="addRights" onchange="checkChange()">
+            Ajout uniquement</label>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="usersContainer">
+    <div class="userItem">
+        <div class="userImg">
+            <img src="../../public/assets/img/userIcon.png" alt="">
+        </div>
+        <div class="userName">
+            <p id="userName">Muriel Perrache</p>
+        </div>
+        <div class="userRights">        
+            <label for="fullRights" id="fullRightsLabel">
+                <input type="checkbox" id="fullRights" class="checkbox" name="fullRights" value="fullRights" onchange="checkChange()">    
+            Accès complet</label>
+        </div>
+        <div class="userRights">
+            <label for="addRights" id="addRightsLabel">
+                <input type="checkbox" id="addRights"  class="checkbox"name="addRights" value="addRights" onchange="checkChange()">    
+            Ajout uniquement</label>
+        </div>
         </div>
     </div>
 </div>
 <div class="saveBtn">
         <button><a href="/companies">Sauvegarder</a></button>
-    </div>
+</div>
 
 <?php
 
