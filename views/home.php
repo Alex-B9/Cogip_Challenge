@@ -5,7 +5,9 @@ ob_start(); // obligatoire
 
 require "views/components/navigation.php";
 
+
 ?>
+
 
     <h1>Bienvenue à la COGIP</h1>
     <h2>Bonjour !</h2>
