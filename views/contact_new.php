@@ -1,22 +1,12 @@
 <?php
-<<<<<<< HEAD
+$resetCss = './../public/styles/reset/reset.css';
 $pageCSS = './../public/styles/pages/contactNew.css';
 $pageTitle = 'Ajouter contact'; // obligatoire
-=======
-$resetCss = './../public/styles/reset/reset.css';
-$pageCSS = './../public/styles/pages/new/new.css';
-$pageTitle = 'Ajouter un contact'; // obligatoire
->>>>>>> 8a5497a7af6ae3e966759ba3b73828760a28d89d
 ob_start(); // obligatoire
 
 require "views/components/navigation.php";
 
 ?>
-<<<<<<< HEAD
-
-    <h1>Bienvenue à la COGIP</h1>
-    <h2>Bonjour !</h2>
-=======
     <div class="titleContainer">
         <h1>Ajout</h1>
         <h2>Nouveau contact</h2>
@@ -53,13 +43,7 @@ require "views/components/navigation.php";
             </div>
         </form>
     </div>
->>>>>>> 8a5497a7af6ae3e966759ba3b73828760a28d89d
-
 <?php
 
 $pageContent = ob_get_clean(); // obligatoire
-<<<<<<< HEAD
 require "layouts/layout.php"; // obligatoire
-=======
-require "layouts/layout.php"; // obligatoire
->>>>>>> 8a5497a7af6ae3e966759ba3b73828760a28d89d
