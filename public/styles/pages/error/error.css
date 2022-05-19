@@ -43,6 +43,7 @@ header .navbarContainer .linksContainer ul li a {
 
 body {
   font-family: "Raleway", sans-serif;
+  color: #373737;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 130px;
@@ -54,106 +55,67 @@ body {
   background-attachment: fixed;
   background-position-y: 360px;
 }
-body .titleContainer {
+body .errorContainer {
   margin-top: 90px;
-  margin-bottom: 50px;
+  padding: 20px;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-}
-body .titleContainer h1 {
-  text-transform: uppercase;
-  color: #FFBF1C;
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 40px;
-}
-body .titleContainer h2 {
-  text-transform: uppercase;
-  color: #FFBF1C;
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 48px;
-}
-body .titleContainer h3 {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 32px;
-  color: #1A3B45;
-}
-
-.connect-container {
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  box-shadow: -23px 203px 82px rgba(0, 0, 0, 0.03), -13px 114px 69px rgba(0, 0, 0, 0.1), -6px 51px 51px rgba(0, 0, 0, 0.17), -1px 13px 28px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
-  margin: auto;
-  width: 75%;
-  background: #FFFFFF;
-  border: none;
-  box-shadow: -23px 203px 82px rgba(0, 0, 0, 0.03), -13px 114px 69px rgba(0, 0, 0, 0.1), -6px 51px 51px rgba(0, 0, 0, 0.17), -1px 13px 28px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-  text-align: center;
 }
-.connect-container .img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  background-color: #EAF7F9;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+body .errorContainer .imgContainer {
+  width: 60%;
 }
-.connect-container .img img {
-  width: 500px;
+body .errorContainer .imgContainer img {
   height: 400px;
-  transform: translate(-25%, 25%);
+  transform: translateX(-25%);
 }
-.connect-container .form {
+body .errorContainer .errorInfo {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 25px;
-  width: 70%;
-  color: #1A3B45;
 }
-
-.field {
-  display: flex;
-  gap: 5px;
-  flex-direction: column;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-  color: #414141;
+body .errorContainer .errorInfo .titleContainer h1 {
+  text-transform: uppercase;
+  color: #FFBF1C;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 60px;
 }
-
-input {
-  box-sizing: border-box;
-  border: none;
-  width: 317px;
-  height: 38px;
-  text-align: center;
-  background: #DCEDF0;
-  border-radius: 10px;
+body .errorContainer .errorInfo .titleContainer h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: normal;
 }
-
-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  padding: 9px 25px;
-  background: #FFB800;
-  color: white;
+body .errorContainer .errorInfo button {
+  background-color: #FFBF1C;
   border: none;
   box-shadow: -2px 10px 3px rgba(86, 71, 6, 0.01), -1px 7px 3px rgba(86, 71, 6, 0.12), -1px 4px 2px rgba(86, 71, 6, 0.4), 0px 2px 2px rgba(86, 71, 6, 0.68), 0px 0px 1px rgba(86, 71, 6, 0.79), 0px 0px 0px rgba(86, 71, 6, 0.8);
+  width: fit-content;
+  margin-top: 50px;
+  padding: 9px 25px;
   border-radius: 24px;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
   cursor: pointer;
   transition: transform 0.1s linear;
 }
-button:hover {
+body .errorContainer .errorInfo button:hover {
   transform: scale(0.9);
 }
+body .errorContainer .errorInfo button a {
+  text-decoration: none;
+}
+body .errorContainer .errorInfo button a:visited {
+  color: inherit;
+}
 
-/*# sourceMappingURL=connect.css.map */
+/*# sourceMappingURL=error.css.map */

@@ -13,14 +13,15 @@ require "views/components/navigation.php";
     <h2 id="contactName">Nom du contact</h2>
 </div>
 <div class="detailsContainer">
-    <div class="contactInfo">
+    <div class="info">
         <p>Société : <span id="contactCompany">nom de la société</span></p>
         <p>Email : <span id="contactEmail">email du contact</span></p>
+        <!-- Ajouter <a href="mailto:" ? -->
         <p>Numéro de téléphone : <span id="contactPhone">numéro de téléphone du contact</span></p>
     </div>
-    <div class="contactInvoices">
+    <div class="tableContainer">
         <h3>Factures liées au contact</h3>
-        <table class="contactInvoicesTable">
+        <table class="tableItem">
             <tr>
                 <th>Numéro de facture</th>
                 <th>Date</th>
@@ -34,6 +35,9 @@ require "views/components/navigation.php";
                 <td id="contactInvoiceDate">18/05/2022</td>
             </tr>
         </table>
+    </div>
+    <div class="backBtn">
+        <button><a href="/contacts">Retour</a></button>
     </div>
 </div>
 

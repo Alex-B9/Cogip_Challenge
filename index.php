@@ -5,6 +5,7 @@ use App\controllers\ContactController;
 use App\controllers\HomeController;
 use App\controllers\InvoicesController;
 use App\controllers\ConnexionController;
+use App\controllers\DashboardController;
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -59,9 +60,9 @@ switch ($url) {
         $register = new ConnexionController();
         $register->create();
         break;
-    case '/register-new':
-        $register = new ConnexionController();
-        $register->store();
+    case '/dashboard':
+        $dashboard = new DashboardController();
+        $dashboard->index();
         break;
     default:
         require('views/notFound.php');
