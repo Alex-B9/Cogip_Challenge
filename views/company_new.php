@@ -28,6 +28,10 @@ require "views/components/navigation.php";
             <input type="tel" id="companyPhone" name="companyPhone">
         </div>
         <div class="formItem">
+            <label for="companyCountry">Pays</label>
+            <input type="tel" id="companyCountry" name="companyCountry">
+        </div>
+        <div class="formItem">
                 <label for="companyType">Type de société</label>
                 <select name="companyType" id="companyType">
                     <option>Type 1</option>
