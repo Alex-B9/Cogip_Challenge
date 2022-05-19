@@ -48,6 +48,12 @@ body {
   margin-right: 20px;
   margin-bottom: 130px;
   line-height: 5px;
+  background-image: url("/../public/assets/img/Vector1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-position-y: 360px;
 }
 body .errorContainer {
   margin-top: 90px;
