@@ -48,6 +48,12 @@ body {
   margin-right: 20px;
   margin-bottom: 130px;
   line-height: 5px;
+  background-image: url("/../public/assets/img/Vector1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-position-y: 360px;
 }
 body .titleContainer {
   margin-top: 90px;
@@ -93,6 +99,7 @@ body .detailsContainer .tableContainer h3 {
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
+  color: #1A4688;
 }
 body .detailsContainer .tableContainer .tableItem {
   border-collapse: collapse;
@@ -110,6 +117,9 @@ body .detailsContainer .tableContainer .tableItem th {
 body .detailsContainer .tableContainer .tableItem td {
   padding: 16px;
   border: 1px solid #AAAAAA;
+}
+body .detailsContainer .tableContainer .tableItem tr {
+  background-color: #FFFFFF;
 }
 body button {
   background-color: #FFBF1C;
