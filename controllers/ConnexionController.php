@@ -62,7 +62,7 @@ class ConnexionController extends Controller
                 echo $error->passwordError();
             }
 
-            if ($firstname && $lastname && $email && $password) {
+            if (!$user->userAlreadyExist($email) && $firstname && $lastname && $email && $password) {
                 $setUser->dbSetUser();
             } else {
                 echo $error->errorUserExist();
