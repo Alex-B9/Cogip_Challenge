@@ -6,16 +6,10 @@ use App\models\crud\CreateModel;
 
 class SetUserModel
 {
-    private $firstname;
-    private $lastname;
-    private $email;
-    private $password;
-    private $DbCreate;
-
-    public function __construct()
-    {
-        $this->DbCreate = new CreateModel();
-    }
+    private string $firstname;
+    private string $lastname;
+    private string $email;
+    private string $password;
 
     public function setFirstname($firstname): SetUserModel
     {
@@ -45,8 +39,10 @@ class SetUserModel
         return $this;
     }
 
-    public function dbSetUser()
+    public function dbSetUser(): void
     {
-        $this->DbCreate->createUser($this->firstname, $this->lastname, $this->email, $this->password);
+        $DbCreate = new CreateModel();
+        $DbCreate->createUser($this->firstname, $this->lastname,
+            $this->email, $this->password);
     }
 }
