@@ -11,7 +11,7 @@ require "views/components/navigation.php";
     <div class='container'>
         <h1>Bienvenue à la COGIP</h1>
         <h2>Bonjour Jean-Christian !
-            Que souhaitez-vous faire aujourd’hui ?</h2>
+</br> Que souhaitez-vous faire aujourd’hui ?</h2>
 
         <div class="button-container">
             <div class="touti">

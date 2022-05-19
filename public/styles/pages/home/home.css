@@ -81,7 +81,7 @@ body h1 {
   font-weight: 800;
   display: flex;
   justify-content: flex-start;
-  margin-top: 90px;
+  margin-top: 70px;
 }
 
 .table {
@@ -141,7 +141,7 @@ h2 {
   font-size: 25px;
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 
 .button-container {
@@ -151,7 +151,8 @@ h2 {
 }
 .button-container .img-title {
   width: 45px;
-  transition: transform 300ms ease-in-out;
+  padding: 25px;
+  transition: transform 200ms ease-in-out;
 }
 .button-container .img-title:hover {
   transform: scale(1.1);
@@ -160,6 +161,7 @@ h2 {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   color: #363636;
+  font-weight: bold;
 }
 .button-container a:hover {
   color: #FFBF1C;
@@ -168,10 +170,8 @@ h2 {
 
 .touti {
   display: flex;
-  border: 1px solid red;
   align-items: center;
   box-sizing: border-box;
-  justify-items: center;
 }
 
 /*# sourceMappingURL=home.css.map */
