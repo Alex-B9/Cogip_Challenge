@@ -12,6 +12,30 @@ require "views/components/navigation.php";
     <h1>Bienvenue à la COGIP</h1>
     <h2>Bonjour Jean-Christian !
 Que souhaitez-vous faire aujourd’hui ?</h2>
+
+<div class="button-container">
+<div class="touti">
+<a href="#"><img class="img-title" src="../public/assets/img/document-1.png" alt="button"></a>
+<a href="#">Nouvelle Facture</a>
+</div>
+<div class="touti">
+<a href="#"><img class="img-title" src="../public/assets/img/add-house-1.png" alt="button"></a>
+<a href="#">Nouvelle Société</a>
+</div>
+<div class="touti">
+<a href="#"><img class="img-title" src="../public/assets/img/user.png" alt="button"></a>
+<a href="#">Nouveau Contact</a>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
 <div class='container-table'>
     <div class="all-table">
     <div class="titre-table">

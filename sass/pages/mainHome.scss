@@ -106,3 +106,38 @@ h2{
     margin-bottom:90px;
     
 }
+.button-container{
+    display: flex;
+    justify-content: flex-start;
+  
+    gap: 10px;;
+    .img-title{
+        width:45px;
+        //padding:25px;
+        transition:transform 300ms ease-in-out;
+        &:hover{
+            
+            transform: scale(1.1);
+        }
+       
+    }
+    a{
+        text-decoration: none;
+        font-family: 'Roboto',sans-serif;
+        color:#363636;
+    
+        &:hover{
+            color:#FFBF1C;
+            font-weight: bold;
+            
+        }
+    }
+}
+.touti{    
+    display: flex;
+border:1px solid red;
+align-items: center;
+box-sizing: border-box;
+justify-items: center;
+
+}
