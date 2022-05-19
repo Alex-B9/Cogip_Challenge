@@ -19,4 +19,9 @@ class ValidateData
         return (!preg_match('/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*\d)(?=\S*[-_*])\S*$/', $password)) ?  FALSE : trim($password); // 1Maj,1min,8charac,1num,
         //1special charac
     }
+
+    public function VatIsValid($vat):string
+    {
+        return (!preg_match('/^\S*(?=\S*\d)$/', $vat)) ? FALSE : trim($vat);
+    }
 }

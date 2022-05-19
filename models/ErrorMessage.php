@@ -28,4 +28,19 @@ class ErrorMessage
     {
         return "Error: incorrect information !";
     }
+
+    public function errorCompanyName(): string
+    {
+        return "Error : Incorrect name company";
+    }
+
+    public function errorCompanyCountry(): string
+    {
+        return "Error : Incorrect company country";
+    }
+
+    public function errorCompanyVat(): string
+    {
+        return "Error : Incorrect company V.A.T.";
+    }
 }
