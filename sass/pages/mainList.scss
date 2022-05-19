@@ -11,9 +11,15 @@ body {
     margin-right: 20px;
     margin-bottom: 130px;
     line-height: 5px;
+    background-image: url('/../public/assets/img/Vector1.svg');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:bottom ;
+    background-attachment: fixed;
+    background-position-y: 400px;
     .titleContainer {
         margin-top: 90px;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
         width: 75%;
         margin-left: auto;
         margin-right: auto;
@@ -33,8 +39,8 @@ body {
         }
     }
     .add {
-        margin-top: 90px;
-        margin-bottom: 50px;
+        margin-top: 50px;
+        margin-bottom: 25px;
         width: 75%;
         margin-left: auto;
         margin-right: auto;    
@@ -60,6 +66,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     h3 {
+        color: #1A4688;
         font-family: 'Inter', sans-serif; 
         font-weight: 700;
         font-size: 24px;
@@ -82,6 +89,7 @@ table {
     }
     tr {
         border: 1px solid #B9B9B9;
+        background-color: white;
     }
 
     img {
