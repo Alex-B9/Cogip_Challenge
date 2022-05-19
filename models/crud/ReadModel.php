@@ -13,7 +13,7 @@ class ReadModel
         $this->db = Database::connect();
     }
 
-    public function getAllUsers()
+    public function getAllUsers(): bool|array
     {
         $sql = "SELECT * FROM people";
 

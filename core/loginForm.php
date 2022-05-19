@@ -1,7 +1,5 @@
 <?php
 
-//namespace App\core;
-
 use App\core\GetFormData;
 use App\core\LoginProcessing;
 

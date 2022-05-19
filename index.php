@@ -64,6 +64,10 @@ switch ($url) {
         $dashboard = new DashboardController();
         $dashboard->index();
         break;
+    case '/register-new':
+        $register = new ConnexionController();
+        $register->store();
+        break;
     default:
         require('views/notFound.php');
 }
