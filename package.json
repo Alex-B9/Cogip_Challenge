@@ -8,6 +8,7 @@
     "sassRegister": "sass --watch sass/pages/mainRegister.scss:public/styles/pages/register/register.css",
     "sassNew" : "sass --watch sass/pages/mainNew.scss:public/styles/pages/new/new.css",
     "sassConnect": "sass --watch sass/pages/mainConnect.scss:public/styles/pages/connect/connect.css",
+    "sassList": "sass --watch sass/pages/mainList.scss:public/styles/pages/list/list.css",
     "sassDetails": "sass --watch sass/pages/mainDetails.scss:public/styles/pages/details/details.css",
     "sassError" : "sass --watch sass/pages/mainError.scss:public/styles/pages/error/error.css"
   },
