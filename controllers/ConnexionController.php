@@ -21,18 +21,18 @@ class ConnexionController extends Controller
     {
         if (isset($_POST)) {
             $dataValidate = new ValidateData();
+            $user = new UserController();
+            $setUser = new SetUserModel();
+            $error = new ErrorMessage();
 
             $firstname = $dataValidate->nameIsValid(Request::get()['registerFirstname']);
             $lastname = $dataValidate->nameIsValid(Request::get()['registerLastname']);
             $email = $dataValidate->emailIsValid(Request::get()['registerEmail']);
             $password = $dataValidate->passwordIsValid(Request::get()['registerPassword']);
 
-            $user = new SetUserModel();
-            $error = new ErrorMessage();
-
             if ($firstname)
             {
-                $user->setFirstname($firstname);
+                $setUser->setFirstname($firstname);
 
             } else {
                 echo $error->firstnameError();
@@ -40,7 +40,7 @@ class ConnexionController extends Controller
 
             if ($lastname)
             {
-                $user->setLastname($lastname);
+                $setUser->setLastname($lastname);
 
             } else {
                 echo $error->lastnameError();
@@ -48,7 +48,7 @@ class ConnexionController extends Controller
 
             if ($email)
             {
-                $user->setEmail($email);
+                $setUser->setEmail($email);
 
             } else {
                 echo $error->emailError();
@@ -56,14 +56,14 @@ class ConnexionController extends Controller
 
             if ($password)
             {
-                $user->setPassword($password);
+                $setUser->setPassword($password);
 
             } else {
                 echo $error->passwordError();
             }
 
             if ($firstname && $lastname && $email && $password) {
-                $user->dbSetUser();
+                $setUser->dbSetUser();
             } else {
                 echo $error->errorUserExist();
             }

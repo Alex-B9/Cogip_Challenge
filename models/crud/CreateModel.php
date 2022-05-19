@@ -24,7 +24,7 @@ class CreateModel
         $statement = $this->db->prepare($sql);
 
         $statement->execute(array(
-            ':PeopleId' => 3,
+            ':PeopleId' => 4,
             ':firstname' => $firstname,
             ':lastname' => $lastname,
             ':email' => $email,
