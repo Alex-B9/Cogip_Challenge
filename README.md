@@ -26,6 +26,7 @@ _Repo created as part of the [BeCode web development training](https://becode.or
   
 - [Anaïs](https://github.com/Nymphadorart)
     <ul>
+      <li>ReadMe</li>
       <li>Connexion page (connect.php)</li>
       <li>List of contacts (contacts.php)</li>
       <li>List of invoices (invoices.php)</li>
