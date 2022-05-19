@@ -1,11 +1,31 @@
 <?php
+$resetCss = './../public/styles/reset/reset.css';
+$pageCSS = './../public/styles/pages/error/error.css';
+$pageTitle = 'Oups...'; // obligatoire
+ob_start(); // obligatoire
 
-$pageTitle = 'Home page';
-ob_get_clean();
+require "views/components/navigation.php";
+
 ?>
-    <?php require "views/components/navigation.php" ?>
 
-    <h1>404 not found</h1>
+<div class="errorContainer">
+    <div class="imgContainer">
+        <img src="../../public/assets/img/error.png" alt="">
+    </div>
+    <div class="errorInfo">
+        <div class="titleContainer">
+            <h1>Oups !</h1>
+            <h2>La page que vous cherchez semble introuvable...</h2>
+        </div>
+        <div class="errorCode">
+            <p>Code erreur : 404</p>
+        </div>
+        <div class="backBtn">
+            <button><a href="/">Retourner à la page d'accueil</a></button>
+        </div>
+    </div>
+</div>
+
 
 <?php
 
