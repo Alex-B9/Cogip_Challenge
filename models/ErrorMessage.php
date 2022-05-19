@@ -43,4 +43,9 @@ class ErrorMessage
     {
         return "Error : Incorrect company V.A.T.";
     }
+
+    public function companyExist(): string
+    {
+        return "Error : Incorrect informations";
+    }
 }

@@ -32,9 +32,9 @@ class CompaniesController extends Controller
             $setCompany = new SetCompanyModel();
             $error = new ErrorMessage();
 
-            $companyName = $dataValidate->nameIsValid(Request::get()['']);
+            $companyName = $dataValidate->nameIsValid(Request::get()['companyName']);
             $companyCountry = $dataValidate->nameIsValid(Request::get()['']);
-            $companyVAT = $dataValidate->vatIsValid(Request::get()['']);
+            $companyVAT = $dataValidate->vatIsValid(Request::get()['companyTVA']);
 
             if ($companyName)
             {
@@ -47,7 +47,7 @@ class CompaniesController extends Controller
 
             if ($companyCountry)
             {
-                $setCompany->setName($companyCountry);
+                $setCompany->setCountry($companyCountry);
             }
             else
             {
@@ -56,11 +56,20 @@ class CompaniesController extends Controller
 
             if ($companyVAT)
             {
-                $setCompany->setName($companyVAT);
+                $setCompany->setVatNumber($companyVAT);
             }
             else
             {
                 echo $error->errorCompanyVat();
+            }
+
+            if ($companyName && $companyCountry && $companyVAT)
+                {
+                    $setCompany->dbSetCompany();
+                }
+            else
+            {
+                echo $error->companyExist();
             }
         }
     }

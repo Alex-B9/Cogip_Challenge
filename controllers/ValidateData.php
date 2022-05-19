@@ -20,7 +20,7 @@ class ValidateData
         //1special charac
     }
 
-    public function VatIsValid($vat):string
+    public function vatIsValid($vat):string
     {
         return (!preg_match('/^\S*(?=\S*\d)$/', $vat)) ? FALSE : trim($vat);
     }
