@@ -119,6 +119,8 @@ ALTER TABLE `invoices`
 --
 ALTER TABLE `people`
     ADD CONSTRAINT `people_ibfk_1` FOREIGN KEY (`Id_Company`) REFERENCES `companies` (`CompaniesId`) ON DELETE CASCADE;
+
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
