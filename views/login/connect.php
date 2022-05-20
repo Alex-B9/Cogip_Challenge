@@ -19,7 +19,7 @@ ob_start();
             </div>
 
         
-                <form class="form" method= "post" action="../../core/loginForm.php">
+                <form class="form" method= "post" action="/connect-get">
                     <div class="field">
                         <label class="label">Votre identifiant</label>
                         <input class="input" type="text" id="userEmail" name="userEmail" placeholder="Entrez votre email" required aria-required=true aria-label="Enter your email">
