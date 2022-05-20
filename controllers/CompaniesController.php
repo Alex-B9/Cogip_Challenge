@@ -33,7 +33,7 @@ class CompaniesController extends Controller
             $error = new ErrorMessage();
 
             $companyName = $dataValidate->nameIsValid(Request::get()['companyName']);
-            $companyCountry = $dataValidate->nameIsValid(Request::get()['']);
+            $companyCountry = $dataValidate->nameIsValid(Request::get()['companyCountry']);
             $companyVAT = $dataValidate->vatIsValid(Request::get()['companyTVA']);
 
             if ($companyName)
