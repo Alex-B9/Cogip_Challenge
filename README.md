@@ -107,13 +107,13 @@ We propose that you code a web application which will respond to the needs and d
   
   ### Before
   
-  <img src="C:\MAMP\htdocs\Cogip_Challenge\public\assets\img README\figma before.png">
+  <img src="figma before.png">
   
   [Original Figma](https://www.figma.com/file/a6ZDqTpKH2OttTQkJ3ujg2i2/COGIP-App?node-id=0%3A1)
   
   ### After
   
-  <img src="C:\MAMP\htdocs\Cogip_Challenge\public\assets\img README\figma after.png">
+  <img src="figma after.png">
   
   [Reworked Figma](https://www.figma.com/file/XIpRRpcq34Cx40T28rNFtw/Cogip-design?node-id=31%3A55)
   
