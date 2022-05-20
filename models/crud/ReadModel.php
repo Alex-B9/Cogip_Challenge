@@ -4,8 +4,6 @@ namespace App\models\crud;
 
 use App\models\Database;
 
-// TEST PAS SUR QUE CA FONCTIONNE ;D
-
 class ReadModel
 {
     private $db;
@@ -15,12 +13,21 @@ class ReadModel
         $this->db = Database::connect();
     }
 
-    public function getAllUsers()
+    public function getAllUsers(): bool|array
     {
-        $sql = "SELECT * FROM `people`";
+        $sql = "SELECT * FROM people";
 
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
+    }
+
+    public function getUser($email)
+    {
+        $sql = "SELECT * FROM people WHERE email = '$email'";
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetch();
     }
 }
