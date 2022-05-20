@@ -20,7 +20,7 @@ require "views/components/navigation.php";
             <p id="userName">Jean-Christian Ranu</p>
         </div>
         <form class="userRights" id="userRights"> 
-            <input type="radio" id="fullRights" class="radio" name="rights" value="fullRights" checked>
+            <input type="radio" id="fullRights" class="radio" name="rights" value="fullRights">
             <label for="fullRights">Accès complet</label><br>
             <input type="radio" id="addRights" class="radio" name="rights" value="addRights">
             <label for="addRights">Ajout uniquement</label><br>    
@@ -39,13 +39,13 @@ require "views/components/navigation.php";
             <input type="radio" id="fullRights" name="rights"   value="fullRights">
             <label for="fullRights">Accès complet</label><br>
             <input type="radio" id="addRights" name="rights"
-            value="addRights" checked>
+            value="addRights">
             <label for="addRights">Ajout uniquement</label><br>    
         </form>
     </div>
 </div>
 <div class="saveBtn">
-        <button><a href="/dashboard" >Sauvegarder</a></button>
+        <button><a href="/dashboard">Sauvegarder</a></button>
 </div>
 
 <script>
