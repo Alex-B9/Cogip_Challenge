@@ -44,8 +44,8 @@ _Repo created as part of the [BeCode web development training](https://becode.or
  
 ### Back End Developer
   
-- [Chris](https://github.com/chris-delecluse)
-- [Alex](https://github.com/Alex-B9)
+- [Chris](https://github.com/chris-delecluse) Router, data base
+- [Alex](https://github.com/Alex-B9) data base
   
 ## Technologies used
  
