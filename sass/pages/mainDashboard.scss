@@ -12,10 +12,15 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 130px;
-    line-height: 5px;
+    background-image: url('/../public/assets/img/Vector1.svg');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:bottom ;
+    background-attachment: fixed;
+    background-position-y: 360px;
     .titleContainer {
         margin-top: 90px;
-        margin-bottom: 120px;
+        margin-bottom: 90px;
         width: 75%;
         margin-left: auto;
         margin-right: auto;
@@ -57,16 +62,21 @@ body {
                 text-transform: uppercase;
             }
             .userRights {
-                width: 25%;
+                width: 50%;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 10px;
+                color : #B9B9B9;
+                input[type="radio"]:checked + label {
+                    color: #373737;
+                    font-weight: 600;
+                }
             }
         }
     }
     .saveBtn {
-        margin-top: 90px;
+        margin-top: 20px;
         margin-bottom: 50px;
         width: 75%;
         margin-left: auto;

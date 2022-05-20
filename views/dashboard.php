@@ -19,17 +19,12 @@ require "views/components/navigation.php";
         <div class="userName">
             <p id="userName">Jean-Christian Ranu</p>
         </div>
-        <div class="userRights">      
-            <label for="fullRights" id="fullRightsLabel">
-                <input type="checkbox" id="fullRights" class="checkbox" name="fullRights" value="fullRights" onchange="checkChange()">      
-            Accès complet</label>
-        </div>
-        <div class="userRights">
-            <label for="addRights" id="addRightsLabel">
-                <input type="checkbox" id="addRights"  class="checkbox"name="addRights" value="addRights" onchange="checkChange()">
-            Ajout uniquement</label>
-        </div>
-        </div>
+        <form class="userRights" id="userRights"> 
+            <input type="radio" id="fullRights" class="radio" name="rights" value="fullRights" checked>
+            <label for="fullRights">Accès complet</label><br>
+            <input type="radio" id="addRights" class="radio" name="rights" value="addRights">
+            <label for="addRights">Ajout uniquement</label><br>    
+        </form>
     </div>
 </div>
 <div class="usersContainer">
@@ -40,22 +35,33 @@ require "views/components/navigation.php";
         <div class="userName">
             <p id="userName">Muriel Perrache</p>
         </div>
-        <div class="userRights">        
-            <label for="fullRights" id="fullRightsLabel">
-                <input type="checkbox" id="fullRights" class="checkbox" name="fullRights" value="fullRights" onchange="checkChange()">    
-            Accès complet</label>
-        </div>
-        <div class="userRights">
-            <label for="addRights" id="addRightsLabel">
-                <input type="checkbox" id="addRights"  class="checkbox"name="addRights" value="addRights" onchange="checkChange()">    
-            Ajout uniquement</label>
-        </div>
-        </div>
+        <form class="userRights" id="userRights"> 
+            <input type="radio" id="fullRights" name="rights"   value="fullRights">
+            <label for="fullRights">Accès complet</label><br>
+            <input type="radio" id="addRights" name="rights"
+            value="addRights" checked>
+            <label for="addRights">Ajout uniquement</label><br>    
+        </form>
     </div>
 </div>
 <div class="saveBtn">
-        <button><a href="/companies">Sauvegarder</a></button>
+        <button><a href="/dashboard" >Sauvegarder</a></button>
 </div>
+
+<script>
+
+    const rights = document.querySelectorAll('.radio');
+
+    function editRadio() {
+        console.log('edit');
+        for (let i = 0; i < rights.length; i++) {
+            if (rights[i].checked === true) {
+                rights[i].setAttribute('checked');
+            }
+        }
+    }
+
+</script>
 
 <?php
 
