@@ -24,7 +24,7 @@ class CreateModel
         $statement = $this->db->prepare($sql);
 
         $statement->execute(array(
-            ':PeopleId' => 10,
+            ':PeopleId' => 16, // need auto increment inside the database.
             ':firstname' => $firstname,
             ':lastname' => $lastname,
             ':email' => $email,
