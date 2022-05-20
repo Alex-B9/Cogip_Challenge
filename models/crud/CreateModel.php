@@ -13,22 +13,23 @@ class CreateModel
         $this->db = Database::connect();
     }
 
-    public function createUser($firstname, $lastname, $email ,$password): void
+    public function createUser($companyId, $firstname, $lastname, $email, $password, $phone): void
     {
 //        $sql = "INSERT INTO people (`PeopleId`,`firstname`, `lastname`, `email`, `password`) VALUES (0,'$firstname','$lastname','$email', '$password')";
 //        $this->db->prepare($sql)->execute();
 
-        $sql = "INSERT INTO people (PeopleId, firstname, lastname, email, password) 
-                VALUES (:PeopleId, :firstname, :lastname, :email, :password)";
+        $sql = "INSERT INTO people (id_company, firstname, lastname, email, password, phone) 
+                VALUES (:id_company, :firstname, :lastname, :email, :password, :Phone)";
 
         $statement = $this->db->prepare($sql);
 
         $statement->execute(array(
-            ':PeopleId' => 18, // need auto increment inside the database.
+            ':id_company' => $companyId,
             ':firstname' => $firstname,
             ':lastname' => $lastname,
             ':email' => $email,
-            ':password' => $password
+            ':password' => $password,
+            ':Phone' => $phone
         ));
     }
 }

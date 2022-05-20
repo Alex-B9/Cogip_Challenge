@@ -1,6 +1,6 @@
 <?php
 $resetCss = './../public/styles/reset/reset.css';
-$pageCSS = './../public/styles/pages/contactNew.css';
+$pageCSS = './../public/styles/pages/new/new.css';
 $pageTitle = 'Ajouter contact'; // obligatoire
 ob_start(); // obligatoire
 
