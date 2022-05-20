@@ -7,11 +7,19 @@ require "views/components/navigation.php";
 
 
 ?>
-
+<div class="bg-color">
     <div class='container'>
-        <h1>Bienvenue à la COGIP</h1>
+    <div class="container-header">
+        <div class="container-tilte">
+        <h1 class="title-welcome">Bienvenue</h1> 
+        <h1>à la COGIP</h1>
         <h2>Bonjour Jean-Christian !
-</br> Que souhaitez-vous faire aujourd’hui ?</h2>
+        </br> Que souhaitez-vous faire aujourd’hui ?</h2>
+        </div>
+<img class="img-title" src="../public/assets/img/digital-nomad.png" alt="">
+</div>
+
+    
 
         <div class="button-container">
             <div class="touti">
@@ -30,13 +38,13 @@ require "views/components/navigation.php";
 
         </div>
 
-
+   
         <div class='container-table'>
             <div class="all-table">
                 <div class="titre-table">
-                    <p>Dernières factures :</p>
+                    <p>Dernier contact :</p>
                 </div>
-                <div>
+                
                     <table class="table">
                         <thead>
                         <th>Numéro facture</th>
@@ -76,11 +84,12 @@ require "views/components/navigation.php";
                             <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                         </tr>
                         </tbody>
+                        <div>
                     </table>
+                    
+                    <div class="titre-table">
+                    <p>Dernières factures :</p>
                 </div>
-            </div>
-            <div class='container-table'>
-                <p class="titre-table">Dernières société :</p>
                 <table class="table">
                     <thead>
                     <th>Numéro facture</th>
@@ -121,8 +130,10 @@ require "views/components/navigation.php";
                     </tr>
                     </tbody>
                 </table>
-            </div>
-            <p class="titre-table">Dernier contact :</p>
+         
+                <div class="titre-table">
+                    <p>Dernières Société :</p>
+                </div>
             <table class="table">
                 <thead>
                 <th>Numéro facture</th>
@@ -164,7 +175,7 @@ require "views/components/navigation.php";
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> </div>
 <?php
 
 $pageContent = ob_get_clean(); // obligatoire

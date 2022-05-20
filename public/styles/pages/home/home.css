@@ -65,7 +65,7 @@ header .navbarContainer .linksContainer ul li:last-child a {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
@@ -77,15 +77,21 @@ body h1 {
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
   color: #FFBF1C;
-  font-size: 54px;
+  font-size: 74px;
   font-weight: 800;
   display: flex;
   justify-content: flex-start;
   margin-top: 70px;
+  line-height: 0px;
+}
+
+.title-welcome {
+  font-size: 50px;
 }
 
 .table {
   width: 800px;
+  margin-bottom: 80px;
   background-color: #fafafa;
   border: 1px solid #B9B9B9;
   border-collapse: collapse;
@@ -105,13 +111,13 @@ body h1 {
   text-align: left;
 }
 .table img {
-  width: 40px;
-  padding: 5px;
+  width: 30px;
+  padding: 1px;
 }
 .table td {
-  padding: 10px;
+  padding: 8px;
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
   color: #535353;
@@ -121,9 +127,21 @@ body h1 {
 .table .facture-style {
   font-weight: bold;
   text-transform: uppercase;
+  width: 200px;
+  text-align: center;
+  font-size: 17px;
+  letter-spacing: 1px;
 }
 .table td:nth-child(3n) {
-  width: 200px;
+  width: 150px;
+  padding-left: 20px;
+}
+.table td:nth-child(2n) {
+  width: 100px;
+  padding-left: 20px;
+}
+.table td:nth-child(4n) {
+  width: 0px;
 }
 
 .titre-table {
@@ -136,18 +154,21 @@ body h1 {
 
 h2 {
   font-family: "Inter", sans-serif;
-  color: #363636;
+  color: #3f3f3f;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 23px;
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 50px;
+  letter-spacing: 1px;
+  margin-top: 50px;
 }
 
 .button-container {
   display: flex;
   justify-content: flex-start;
+  justify-content: space-around;
   gap: 10px;
+  margin-top: 90px;
 }
 .button-container .img-title {
   width: 45px;
@@ -172,6 +193,35 @@ h2 {
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+.img-title {
+  width: 450px;
+  padding-left: 50px;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.container-tilte {
+  margin-top: 10px;
+}
+
+.bg-color {
+  background-color: #e0f8ff;
+  height: 470px;
+}
+
+.all-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=home.css.map */
