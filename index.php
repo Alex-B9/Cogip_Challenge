@@ -20,6 +20,10 @@ switch ($url) {
         $sign = new ConnexionController();
         $sign->index();
         break;
+    case '/connect-get':
+        $sign = new ConnexionController();
+        $sign->get();
+        break;
     case '/contacts':
         $contact = new ContactController();
         $contact->index();
