@@ -51,9 +51,7 @@ _Repo created as part of the [BeCode web development training](https://becode.or
  
 ![Vs Code](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)
 
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
-  
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
@@ -109,9 +107,13 @@ We propose that you code a web application which will respond to the needs and d
   
   ### Before
   
+  <img src="C:\MAMP\htdocs\Cogip_Challenge\public\assets\img README\figma before.png">
+  
   [Original Figma](https://www.figma.com/file/a6ZDqTpKH2OttTQkJ3ujg2i2/COGIP-App?node-id=0%3A1)
   
   ### After
+  
+  <img src="C:\MAMP\htdocs\Cogip_Challenge\public\assets\img README\figma after.png">
   
   [Reworked Figma](https://www.figma.com/file/XIpRRpcq34Cx40T28rNFtw/Cogip-design?node-id=31%3A55)
   
