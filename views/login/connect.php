@@ -27,7 +27,7 @@ ob_start();
 
                     <div class="field">
                         <label class="label">Votre mot de passe</label>
-                        <input class="input" type="text" id="userPassword" name="userPassword" placeholder="Entrez votre mot de passe" required aria-required=true aria-label="Enter your password">
+                        <input class="input" type="password" id="userPassword" name="userPassword" placeholder="Entrez votre mot de passe" required aria-required=true aria-label="Enter your password">
                     </div>
 
                     <a href="register">Pas encore inscrit ? Cliquez ici</a>
