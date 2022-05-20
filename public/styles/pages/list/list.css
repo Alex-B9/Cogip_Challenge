@@ -64,7 +64,6 @@ header .navbarContainer .linksContainer ul li:last-child a {
 
 body {
   font-family: "Raleway", sans-serif;
-  color: #373737;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 130px;
@@ -74,11 +73,11 @@ body {
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
-  background-position-y: 360px;
+  background-position-y: 400px;
 }
 body .titleContainer {
   margin-top: 90px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -97,77 +96,61 @@ body .titleContainer h2 {
   font-weight: 800;
   font-size: 48px;
 }
-body .detailsContainer {
+body .add {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .add img {
+  width: 30px;
+  height: 35px;
+}
+body .add a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #48AFCF;
+}
+body .add a:hover {
+  color: #1A4688;
+}
+
+.tableContainer {
   margin-top: 90px;
   margin-bottom: 50px;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  line-height: normal;
 }
-body .detailsContainer .info p {
-  font-weight: 700;
-  font-size: 16px;
-}
-body .detailsContainer .info p span {
-  font-weight: 400;
-}
-body .detailsContainer .tableContainer {
-  margin-top: 50px;
-}
-body .detailsContainer .tableContainer h3 {
+.tableContainer h3 {
+  color: #1A4688;
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
-  color: #1A4688;
-}
-body .detailsContainer .tableContainer .tableItem {
-  border-collapse: collapse;
-  text-align: left;
-}
-body .detailsContainer .tableContainer .tableItem th {
-  border: 1px solid #AAAAAA;
-  background: #48AFCF;
-  padding: 16px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 16px;
-}
-body .detailsContainer .tableContainer .tableItem td {
-  padding: 16px;
-  border: 1px solid #AAAAAA;
-}
-body .detailsContainer .tableContainer .tableItem tr {
-  background-color: #FFFFFF;
-}
-body button {
-  background-color: #FFBF1C;
-  border: none;
-  box-shadow: -2px 10px 3px rgba(86, 71, 6, 0.01), -1px 7px 3px rgba(86, 71, 6, 0.12), -1px 4px 2px rgba(86, 71, 6, 0.4), 0px 2px 2px rgba(86, 71, 6, 0.68), 0px 0px 1px rgba(86, 71, 6, 0.79), 0px 0px 0px rgba(86, 71, 6, 0.8);
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  padding: 9px 25px;
-  border-radius: 24px;
-  font-family: "Inter", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  color: #FFFFFF;
-  cursor: pointer;
-  transition: transform 0.1s linear;
-}
-body button:hover {
-  transform: scale(0.9);
-}
-body button a {
-  text-decoration: none;
-}
-body button a:visited {
-  color: inherit;
 }
 
-/*# sourceMappingURL=details.css.map */
+table {
+  border-collapse: collapse;
+}
+table th {
+  background-color: #48AFCF;
+  color: white;
+  border: 1px solid #B9B9B9;
+  padding: 10px;
+}
+table td {
+  border: 1px solid #B9B9B9;
+  padding: 15px;
+}
+table tr {
+  border: 1px solid #B9B9B9;
+  background-color: white;
+}
+table img {
+  width: 25px;
+  height: 25px;
+}
+
+/*# sourceMappingURL=list.css.map */

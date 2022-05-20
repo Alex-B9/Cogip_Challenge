@@ -5,11 +5,18 @@ $pageCSS = 'public/styles/pages/register/register.css';
 $pageTitle = 'Register page';
 ob_start();
 ?>
-
-    <?php require "views/components/navigation.php" ?>
-
-    <h1>Sign Up</h1>
-    <form method="post" action="">
+<?php require "views/components/navigation.php"; ?>
+<div class=register-titre>
+    <h1>S'enregister</h1>
+    <p class="soustitre-register">Remplissez attentivement le formulaire</p>
+</div>
+<div class="container-form-pos">
+<div class=container-form>
+    <div class="container-left">
+        <img class="img-register" src="../../public/assets/img/register.png" alt="register image">
+    </div>
+    <div class="container-right">
+    <form method="post" action="/register-new">
         <div class="field">
             <label class="label">Firstname</label>
             <input class="input" type="text" name="registerFirstname" placeholder="Enter your firstname" required aria-required=true aria-label="Enter your firstname">
@@ -18,6 +25,7 @@ ob_start();
         <div class="field">
             <label class="label">Lastname</label>
             <input class="input" type="text" name="registerLastname" placeholder="Enter your lastname" required aria-required=true aria-label="Enter your lastname">
+<!--            --><?//=(isset(errmess)) ? $errmess  ?>
         </div>
 
         <div class="field">
@@ -37,7 +45,8 @@ ob_start();
         </div>
 
     </form>
-
+</div>
+</div>
 <?php
 
 $pageContent = ob_get_clean();

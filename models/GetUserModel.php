@@ -20,7 +20,7 @@ class GetUserModel
 
     public function getFirstname()
     {
-        $this->firstname = $this->dbRead->getUser($this->email)['username'];
+        $this->firstname = $this->dbRead->getUser($this->email)['firstname'];
 
         Database::disconnect();
 
