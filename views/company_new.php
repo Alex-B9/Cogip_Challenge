@@ -34,8 +34,8 @@ require "views/components/navigation.php";
         <div class="formItem">
                 <label for="companyType">Type de société</label>
                 <select name="companyType" id="companyType">
-                    <option>Type 1</option>
-                    <option>Type 2</option>
+                    <option name="client">Client</option>
+                    <option name="provider">Fournisseur</option>
                 </select>
         </div>
         <div class="formItem">
