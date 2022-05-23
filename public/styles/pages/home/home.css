@@ -17,14 +17,10 @@ header .navbarContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  border: 1px solid blue;
+  align-items: flex-end;
 }
 header .navbarContainer img {
-  width: 100px;
-}
-header .navbarContainer .linksContainer {
-  border: 1px solid green;
+  width: 180px;
 }
 header .navbarContainer .linksContainer ul {
   display: flex;
@@ -67,10 +63,6 @@ header .navbarContainer .linksContainer ul li:last-child {
 header .navbarContainer .linksContainer ul li:last-child a {
   text-decoration: none;
   color: #48AFCF;
-}
-
-.img-container {
-  border: 1px solid red;
 }
 
 .container {

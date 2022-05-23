@@ -3,7 +3,7 @@
     <nav class='navbarContainer'>
         <div class="img-container">
         <a href="./">
-            <img src="../../public/assets/img/Logo.png" alt="logo">
+            <img src="../../public/assets/img/logo5.png" alt="logo">
         </a>
         </div>
         <div class='linksContainer'>
