@@ -16,7 +16,8 @@ class ValidateData
 
     public function phoneIsValid($phoneNumber): int
     {
-        return (!preg_match("/[\d-]{5,10}/", $phoneNumber)) ? FALSE : trim($phoneNumber);
+        return (!preg_match("/[\d-]{8,10}/", $phoneNumber)) ? FALSE : trim
+        ($phoneNumber);
     }
 
     public function companyNameIsValid($companyName): string

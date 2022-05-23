@@ -16,7 +16,7 @@ require "views/components/navigation.php";
         <h2>Nouvelle société</h2>
     </div>
     <div class="addContainer">
-        <div class="addImg"><img src="../../public/assets/img/leader.png" alt=""></div>
+        <div class="addImg"><img src="../public/assets/img/leader.png" alt=""></div>
         <form action="/company-store" method="post" class="addForm">
             <div class="formItem">
                 <label for="companyName">Nom de la société</label>

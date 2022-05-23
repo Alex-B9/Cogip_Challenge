@@ -15,7 +15,7 @@ require "views/components/navigation.php";
         <h2>Nouveau contact</h2>
     </div>
     <div class="addContainer">
-        <div class="addImg"><img src="../../public/assets/img/email.png" alt="" id="contactNewImg"></div>
+        <div class="addImg"><img src="../public/assets/img/email.png" alt="" id="contactNewImg"></div>
         <form class="addForm" action="/contact-store" method="post">
             <div class="formItem">
                 <label for="lastname">Prénom</label>
