@@ -19,6 +19,11 @@ class ErrorMessage
         return "Error: incorrect mail !";
     }
 
+    public function phoneError(): string
+    {
+        return "Error: incorrect phone number !";
+    }
+
     public function passwordError(): string
     {
         return "Error: incorrect password !";
@@ -33,4 +38,20 @@ class ErrorMessage
     {
         return "Error: incorrect information !";
     }
+
+    public function companyNameError(): string
+    {
+        return "Error: incorrect company name !";
+    }
+
+    public function companyVatError(): string
+    {
+        return "Error: incorrect VAT !";
+    }
+
+    public function companyCountryError(): string
+    {
+        return "Error: incorrect country !";
+    }
+
 }

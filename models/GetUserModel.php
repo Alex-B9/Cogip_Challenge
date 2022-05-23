@@ -6,48 +6,33 @@ use App\models\crud\ReadModel;
 
 class GetUserModel
 {
-    private $firstname;
-    private $lastname;
-    private $email;
-    private $password;
-    private $dbRead;
+    private string $email;
+    private string $password;
+
+    private ReadModel $dbRead;
 
     public function __construct($email)
     {
-        $this->email = $email;
         $this->dbRead = new ReadModel();
-    }
-
-    public function getFirstname()
-    {
-        $this->firstname = $this->dbRead->getUser($this->email)['firstname'];
-
-        Database::disconnect();
-
-        return $this->firstname;
-    }
-
-    public function getLastname()
-    {
-        $this->lastname = $this->dbRead->getUser($this->email)['lastname'];
-
-        Database::disconnect();
-
-        return $this->lastname;
+        $this->email = $email;
     }
 
     public function getEmail()
     {
-        $this->email = $this->dbRead->getUser($this->email)['email'];
+        if (!is_bool($this->dbRead->getEmailByRow($this->email, 'accounts'))) {
+            $this->email = $this->dbRead->getEmailByRow($this->email, 'accounts')['email'];
 
-        Database::disconnect();
+            Database::disconnect();
 
-        return $this->email;
+            return $this->email;
+        }
+
+        return null;
     }
 
     public function getPassword()
     {
-        $this->password = $this->dbRead->getUser($this->email)['password'];
+        $this->password = $this->dbRead->getEmailByRow($this->email, 'accounts')['password'];
 
         Database::disconnect();
 

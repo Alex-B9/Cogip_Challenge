@@ -3,14 +3,14 @@
 namespace App\models\crud;
 
 use App\models\Database;
-use App\models\GetUserModel;
+use App\models\GetPeopleModel;
 
 class DeleteModel
 {
     private $db;
     private $user;
 
-    public function __construct(GetUserModel $getUserModel)
+    public function __construct(GetPeopleModel $getUserModel)
     {
         $this->db=Database::connect();
         $this->user = $getUserModel;

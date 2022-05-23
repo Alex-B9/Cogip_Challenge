@@ -32,6 +32,10 @@ switch ($url) {
         $contact = new ContactController();
         $contact->create();
         break;
+    case '/contact-store':
+        $contact = new ContactController();
+        $contact->store();
+        break;
     case '/contact-details':
         $contact = new ContactController();
         $contact->show();
@@ -56,21 +60,17 @@ switch ($url) {
         $company = new CompaniesController();
         $company->create();
         break;
+    case '/company-store':
+        $company = new CompaniesController();
+        $company->store();
+        break;
     case '/company-details':
         $company = new CompaniesController();
         $company->show();
         break;
-    case '/register':
-        $register = new ConnexionController();
-        $register->create();
-        break;
     case '/dashboard':
         $dashboard = new DashboardController();
         $dashboard->index();
-        break;
-    case '/register-new':
-        $register = new ConnexionController();
-        $register->store();
         break;
     default:
         require('views/notFound.php');

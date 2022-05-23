@@ -27,9 +27,6 @@ SET time_zone = "+00:00";
 -- Structure de la table `companies`
 --
 
-DROP DATABASE `cogip` IF EXISTS
-create DATABASE IF NOT EXISTS `cogip`;
-
 DROP TABLE IF EXISTS `companies`;
 CREATE TABLE IF NOT EXISTS `companies` (
                                            `CompaniesId` int(11) NOT NULL AUTO_INCREMENT,
@@ -73,7 +70,6 @@ CREATE TABLE IF NOT EXISTS `people` (
                                         `firstname` varchar(20) NOT NULL,
                                         `lastname` varchar(20) NOT NULL,
                                         `email` varchar(50) NOT NULL,
-                                        `password` varchar(255) NOT NULL,
                                         `Phone` int(10) NOT NULL,
                                         PRIMARY KEY (`Id_People`),
                                         KEY `Id_Company` (`Id_Company`)

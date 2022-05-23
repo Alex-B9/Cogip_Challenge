@@ -1,4 +1,7 @@
 <?php
+
+use App\models\crud\ReadModel;
+
 $resetCss = './../public/styles/reset/reset.css';
 $pageCSS = './../public/styles/pages/new/new.css';
 $pageTitle = 'Ajouter contact'; // obligatoire
@@ -13,7 +16,7 @@ require "views/components/navigation.php";
     </div>
     <div class="addContainer">
         <div class="addImg"><img src="../../public/assets/img/email.png" alt="" id="contactNewImg"></div>
-        <form class="addForm" action="">
+        <form class="addForm" action="/contact-store" method="post">
             <div class="formItem">
                 <label for="lastname">Prénom</label>
                 <input type="text" id="lastname" name="lastname">
@@ -33,9 +36,11 @@ require "views/components/navigation.php";
             <div class="formItem">
                 <label for="company">Société</label>
                 <select name="company" id="company">
-                    <option>Société 1</option>
-                    <option>Société 2</option>
-                    <option>Société 3</option>
+                    <?php $companyName = new ReadModel();
+
+                    foreach ($companyName->getAllCompany() as $item) { ?>
+                        <option value=<?= $item['CompaniesId'] ?>><?= $item['company_name'] ?></option>
+                    <?php } ?>
                 </select>
             </div>
             <div class="formItem">

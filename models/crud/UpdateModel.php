@@ -3,7 +3,7 @@
 namespace App\models\crud;
 
 use App\models\Database;
-use App\models\GetUserModel;
+use App\models\GetPeopleModel;
 
 class UpdateModel
 {
@@ -11,7 +11,7 @@ class UpdateModel
 
     private $user;
 
-    public function __construct(GetUserModel $getUserModel)
+    public function __construct(GetPeopleModel $getUserModel)
     {
         $this->db=Database::connect();
         $this->user = $getUserModel;
