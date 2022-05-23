@@ -37,6 +37,7 @@ header {
                 li {
                     list-style-type: none;
                     font-size: 16px;
+                    
                     color: #48AFCF;
                     &:nth-child(-n+4) {
                         a {
@@ -67,11 +68,19 @@ header {
                     &:last-child {
                         border: 1px solid #48AFCF;
                         padding: 20px 20px;
-                       
+                       &:hover{
+                           background-color: #48AFCF;
+                           border:1px solid antiquewhite;
+                           a{
+                               color:antiquewhite;
+                               
+                       }}
                         a {
                             text-decoration: none;
                             color: #48AFCF;
+                            
                         }
+                        
                     }
                 }
             }
