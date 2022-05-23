@@ -42,7 +42,7 @@ require "views/components/navigation.php";
         <div class='container-table'>
             <div class="all-table">
                 <div class="titre-table">
-                    <p>Dernier contact :</p>
+                    <p>Dernière facture :</p>
                 </div>
                 
                     <table class="table">
@@ -88,44 +88,50 @@ require "views/components/navigation.php";
                     </table>
                     
                     <div class="titre-table">
-                    <p>Dernières factures :</p>
+                    <p>Dernier contacts :</p>
                 </div>
                 <table class="table">
                     <thead>
-                    <th>Numéro facture</th>
-                    <th>Date</th>
-                    <th>Société</th>
+                    <th>Nom</th>
+                    <th>Téléphone</th>
+                    <th>e-mail</th>
+                    <th>société</th>
                     <th></th>
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="facture-style">OFKZSODJOS1</td>
-                        <td>00/00/01</td>
-                        <td>societé1</td>
+                        <td class="facture-style">Nom</td>
+                        <td>téléphone</td>
+                        <td>email</td>
+                        <td>société</td>
                         <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                     </tr>
                     <tr>
-                        <td class="facture-style">OFKZSODJOS2</td>
-                        <td>00/00/02</td>
-                        <td>societé2</td>
+                    <td class="facture-style">Nom</td>
+                        <td>téléphone</td>
+                        <td>email</td>
+                        <td>société</td>
                         <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                     </tr>
                     <tr>
-                        <td class="facture-style">OFKZSODJOS3</td>
-                        <td>00/00/03</td>
-                        <td>societé3</td>
+                    <td class="facture-style">Nom</td>
+                        <td>téléphone</td>
+                        <td>email</td>
+                        <td>société</td>
                         <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                     </tr>
                     <tr>
-                        <td class="facture-style">OFKZSODJOS4</td>
-                        <td>00/00/04</td>
-                        <td>societé4</td>
+                    <td class="facture-style">Nom</td>
+                        <td>téléphone</td>
+                        <td>email</td>
+                        <td>société</td>
                         <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                     </tr>
                     <tr>
-                        <td class="facture-style">OFKZSODJOS5</td>
-                        <td>00/00/05</td>
-                        <td>societé5</td>
+                    <td class="facture-style">Nom</td>
+                        <td>téléphone</td>
+                        <td>email</td>
+                        <td>société</td>
                         <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                     </tr>
                     </tbody>
@@ -136,40 +142,46 @@ require "views/components/navigation.php";
                 </div>
             <table class="table">
                 <thead>
-                <th>Numéro facture</th>
-                <th>Date</th>
-                <th>Société</th>
+                <th>Nom</th>
+                <th>TVA</th>
+                <th>Pays</th>
+                <th>type</th>
                 <th></th>
                 </thead>
                 <tbody>
                 <tr>
-                    <td class="facture-style">OFKZSODJOS1</td>
-                    <td>00/00/01</td>
-                    <td>societé1</td>
+                    <td class="facture-style">Nom</td>
+                    <td>TVA</td>
+                    <td>Country</td>
+                    <td>type</td>
                     <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                 </tr>
                 <tr>
-                    <td class="facture-style">OFKZSODJOS2</td>
-                    <td>00/00/02</td>
-                    <td>societé2</td>
+                <td class="facture-style">Nom</td>
+                    <td>TVA</td>
+                    <td>Country</td>
+                    <td>type</td>
                     <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                 </tr>
                 <tr>
-                    <td class="facture-style">OFKZSODJOS3</td>
-                    <td>00/00/03</td>
-                    <td>societé3</td>
+                <td class="facture-style">Nom</td>
+                    <td>TVA</td>
+                    <td>Country</td>
+                    <td>type</td>
                     <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                 </tr>
                 <tr>
-                    <td class="facture-style">OFKZSODJOS4</td>
-                    <td>00/00/04</td>
-                    <td>societé4</td>
+                <td class="facture-style">Nom</td>
+                    <td>TVA</td>
+                    <td>Country</td>
+                    <td>type</td>
                     <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                 </tr>
                 <tr>
-                    <td class="facture-style">OFKZSODJOS5</td>
-                    <td>00/00/05</td>
-                    <td>societé5</td>
+                <td class="facture-style">Nom</td>
+                    <td>TVA</td>
+                    <td>Country</td>
+                    <td>type</td>
                     <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                 </tr>
                 </tbody>
