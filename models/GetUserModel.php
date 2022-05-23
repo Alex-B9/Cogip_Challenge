@@ -20,7 +20,7 @@ class GetUserModel
 
     public function getFirstname()
     {
-        $this->firstname = $this->dbRead->getUser($this->email)['username'];
+        $this->firstname = $this->dbRead->getUser($this->email)['firstname'];
 
         Database::disconnect();
 
@@ -29,7 +29,7 @@ class GetUserModel
 
     public function getLastname()
     {
-        $this->firstname = $this->dbRead->getUser($this->email)['lastname'];
+        $this->lastname = $this->dbRead->getUser($this->email)['lastname'];
 
         Database::disconnect();
 
@@ -38,12 +38,16 @@ class GetUserModel
 
     public function getEmail()
     {
+        $this->email = $this->dbRead->getUser($this->email)['email'];
+
+        Database::disconnect();
+
         return $this->email;
     }
 
     public function getPassword()
     {
-        $this->firstname = $this->dbRead->getUser($this->email)['password'];
+        $this->password = $this->dbRead->getUser($this->email)['password'];
 
         Database::disconnect();
 

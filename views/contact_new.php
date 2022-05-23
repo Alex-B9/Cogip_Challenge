@@ -1,7 +1,7 @@
 <?php
 $resetCss = './../public/styles/reset/reset.css';
 $pageCSS = './../public/styles/pages/new/new.css';
-$pageTitle = 'Ajouter un contact'; // obligatoire
+$pageTitle = 'Ajouter contact'; // obligatoire
 ob_start(); // obligatoire
 
 require "views/components/navigation.php";
@@ -43,7 +43,6 @@ require "views/components/navigation.php";
             </div>
         </form>
     </div>
-
 <?php
 
 $pageContent = ob_get_clean(); // obligatoire
