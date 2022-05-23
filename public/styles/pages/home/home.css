@@ -85,6 +85,10 @@ body h1 {
   line-height: 0px;
 }
 
+.home-del {
+  width: 0px;
+}
+
 .title-welcome {
   font-size: 50px;
 }
@@ -132,15 +136,7 @@ body h1 {
   font-size: 17px;
   letter-spacing: 1px;
 }
-.table td:nth-child(3n) {
-  width: 150px;
-  padding-left: 20px;
-}
-.table td:nth-child(2n) {
-  width: 100px;
-  padding-left: 20px;
-}
-.table td:nth-child(4n) {
+.table td:nth-child(5n) {
   width: 0px;
 }
 

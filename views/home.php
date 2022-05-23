@@ -57,31 +57,31 @@ require "views/components/navigation.php";
                             <td class="facture-style">OFKZSODJOS1</td>
                             <td>00/00/01</td>
                             <td>societé1</td>
-                            <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
+                            <td class="home-del"><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                         </tr>
                         <tr>
                             <td class="facture-style">OFKZSODJOS2</td>
                             <td>00/00/02</td>
                             <td>societé2</td>
-                            <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
+                            <td class="home-del"><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                         </tr>
                         <tr>
                             <td class="facture-style">OFKZSODJOS3</td>
                             <td>00/00/03</td>
                             <td>societé3</td>
-                            <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
+                            <td class="home-del"><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                         </tr>
                         <tr>
                             <td class="facture-style">OFKZSODJOS4</td>
                             <td>00/00/04</td>
                             <td>societé4</td>
-                            <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
+                            <td class="home-del"><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                         </tr>
                         <tr>
                             <td class="facture-style">OFKZSODJOS5</td>
                             <td>00/00/05</td>
                             <td>societé5</td>
-                            <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
+                            <td class="home-del"><img src="../public/assets/img/delete-2.png" alt="delete"></td>
                         </tr>
                         </tbody>
                         <div>

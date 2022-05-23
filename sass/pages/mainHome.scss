@@ -42,7 +42,9 @@ body {
        
     }
 }
-
+.home-del{
+    width:0px;
+}
  .title-welcome{
             font-size: 50px;  
         }
@@ -91,23 +93,25 @@ body {
             letter-spacing: 1px;
             
         }
-    td:nth-child(3n){
-           width:150px;
-           padding-left: 20px;
+       
+    // td:nth-child(3n){
+    //        width:150px;
+    //        padding-left: 20px;
            
-       }
-       td:nth-child(2n){
-        width:100px;
-        padding-left: 20px;
+    //    }
+    //    td:nth-child(2n){
+    //     width:100px;
+    //     padding-left: 20px;
     
-    }
-    td:nth-child(4n){
+    // }
+    td:nth-child(5n){
         width:0px;
         
     
     }
-      
+    
 } 
+ 
 .titre-table{
     font-size: 20px;
     font-family: 'Roboto',sans-serif;
