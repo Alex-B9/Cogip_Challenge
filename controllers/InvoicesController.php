@@ -31,9 +31,10 @@ class InvoicesController extends Controller
             $error = new ErrorMessage();
 
             $invoiceNumber = $validate->invoiceNumberIsValid(Request::get()['invoiceNumber']);
-            $invoiceDate = $validate->dateIsValid(Request::get()['invoiceDate']);
+            $invoiceDate = Request::get()['invoiceDate'];
             $invoiceCompany = $validate->companyNameIsValid(Request::get()['invoiceCompany']);
             $invoiceContact = Request::get()['invoiceContact'];
+            $idPeople  = Request::get()[''];
 
             if ($invoiceNumber)
             {
@@ -67,6 +68,7 @@ class InvoicesController extends Controller
             {
                 echo $error->invoiceContactError();
             }
+            if ($)
 
             if ($invoiceNumber && $invoiceDate && $invoiceCompany && $invoiceContact)
             {

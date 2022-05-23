@@ -1,4 +1,7 @@
 <?php
+
+use App\models\crud\ReadModel;
+
 $resetCss = './../public/styles/reset/reset.css';
 $pageCSS = './../public/styles/pages/new/new.css';
 $pageTitle = 'Ajouter une facture'; // obligatoire
@@ -14,7 +17,7 @@ require "views/components/navigation.php";
 </div>
 <div class="addContainer">
     <div class="addImg"><img src="../../public/assets/img/sales-team.png" alt=""></div>
-    <form action="" class="addForm">
+    <form action="/invoice-store" method="POST" class="addForm">
         <div class="formItem">
             <label for="invoiceNumber">Numéro de facture</label>
             <input type="text" id="invoiceNumber" name="invoiceNumber">
@@ -25,14 +28,25 @@ require "views/components/navigation.php";
         </div>
         <div class="formItem">
             <label for="invoiceCompany">Société</label>
-            <input type="text" id="invoiceCompany" name="invoiceCompany">
+            <select name="invoiceCompany" id="invoiceCompany">
+                <?php $incoiceCompany = new Readmodel();
+
+                foreach ($incoiceCompany->getAllCompany() as $item) {?>
+                    <option value="<?= $item['CompaniesId'] ?>"><?=
+                        $item['company_name'] ?></option>
+                <?php } ?>
+            </select>
         </div>
         <div class="formItem">
                 <label for="invoiceContact">Personne de contact</label>
                 <select name="invoiceContact" id="invoiceContact">
-                    <option>Personne 1</option>
-                    <option>Personne 2</option>
-                    <option>Personne 3</option>
+                    <?php $invoiceContact = new ReadModel();
+
+                    foreach ($invoiceContact->getAllPeople() as $item) {?>
+                        <option value="<?= $item['Id_People'] ?>"><?=
+                           $item['firstname']. " " . $item['lastname']
+                            ?></option>
+                        <?php } ?>
                 </select>
         </div>
         <div class="formItem">
