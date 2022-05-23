@@ -24,15 +24,15 @@ require "views/components/navigation.php";
         <div class="button-container">
             <div class="touti">
                 <a href="#"><img class="img-title" src="../public/assets/img/document-1.png" alt="button"></a>
-                <a href="#">Nouvelle Facture</a>
+                <a href="./invoice_new.php">Nouvelle Facture</a>
             </div>
             <div class="touti">
                 <a href="#"><img class="img-title" src="../public/assets/img/add-house-1.png" alt="button"></a>
-                <a href="#">Nouvelle Société</a>
+                <a href="./company_new.php">Nouvelle Société</a>
             </div>
             <div class="touti">
                 <a href="#"><img class="img-title" src="../public/assets/img/user.png" alt="button"></a>
-                <a href="#">Nouveau Contact</a>
+                <a href="./contact_new.php">Nouveau Contact</a>
             </div>
 
 
