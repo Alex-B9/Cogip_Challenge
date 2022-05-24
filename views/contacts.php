@@ -1,3 +1,4 @@
+
 <?php
 
 $resetCss = "public/styles/reset/reset.css";
