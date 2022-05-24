@@ -7,6 +7,9 @@ require "views/components/navigation.php";
 
 
 ?>
+ 
+     
+ 
 <div class="bg-color">
     <div class='container'>
     <div class="container-header">
