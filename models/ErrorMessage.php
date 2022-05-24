@@ -26,6 +26,11 @@ class ErrorMessage
 
     public function errorUserExist(): string
     {
+        return "Error: user already exist !";
+    }
+
+    public function incorrectInformation(): string
+    {
         return "Error: incorrect information !";
     }
 

@@ -27,6 +27,9 @@ SET time_zone = "+00:00";
 -- Structure de la table `companies`
 --
 
+DROP DATABASE `cogip` IF EXISTS
+create DATABASE IF NOT EXISTS `cogip`;
+
 DROP TABLE IF EXISTS `companies`;
 CREATE TABLE IF NOT EXISTS `companies` (
                                            `CompaniesId` int(11) NOT NULL AUTO_INCREMENT,
@@ -119,8 +122,6 @@ ALTER TABLE `invoices`
 --
 ALTER TABLE `people`
     ADD CONSTRAINT `people_ibfk_1` FOREIGN KEY (`Id_Company`) REFERENCES `companies` (`CompaniesId`) ON DELETE CASCADE;
-
-
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

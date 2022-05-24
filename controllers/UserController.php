@@ -6,16 +6,16 @@ use App\models\crud\ReadModel;
 
 class UserController
 {
-    public function userAlreadyExist($email)
+    public function userAlreadyExist($email): bool
     {
         $readDb = new ReadModel();
 
         foreach ($readDb->getAllUsers() as $user) {
-            if ($user == $email) {
+            if ($user['email'] == $email) {
                 return true;
-            } else {
-                return false;
             }
         }
+
+        return false;
     }
 }

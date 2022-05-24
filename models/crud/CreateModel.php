@@ -13,22 +13,31 @@ class CreateModel
         $this->db = Database::connect();
     }
 
+<<<<<<< HEAD
     public function createUser($firstname, $lastname, $email, $password): void
+=======
+    public function createUser($companyId, $firstname, $lastname, $email, $password, $phone): void
+>>>>>>> 9a658a6a5305e32ba37317ccbff51bfe625e8e39
     {
 //        $sql = "INSERT INTO people (`PeopleId`,`firstname`, `lastname`, `email`, `password`) VALUES (0,'$firstname','$lastname','$email', '$password')";
 //        $this->db->prepare($sql)->execute();
 
-        $sql = "INSERT INTO people (PeopleId, firstname, lastname, email, password) 
-                VALUES (:PeopleId, :firstname, :lastname, :email, :password)";
+        $sql = "INSERT INTO people (id_company, firstname, lastname, email, password, phone) 
+                VALUES (:id_company, :firstname, :lastname, :email, :password, :Phone)";
 
         $statement = $this->db->prepare($sql);
 
         $statement->execute(array(
+<<<<<<< HEAD
             ':PeopleId' => 0,
+=======
+            ':id_company' => $companyId,
+>>>>>>> 9a658a6a5305e32ba37317ccbff51bfe625e8e39
             ':firstname' => $firstname,
             ':lastname' => $lastname,
             ':email' => $email,
-            ':password' => $password
+            ':password' => $password,
+            ':Phone' => $phone
         ));
     }
 
