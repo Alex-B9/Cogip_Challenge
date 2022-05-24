@@ -1,8 +1,8 @@
 <?php
 $resetCss = './../public/styles/reset/reset.css';
-$pageCSS = './../public/styles/pages/new/new.css';4
+$pageCSS = './../public/styles/pages/new/new.css';
 
-*$pageTitle = 'Ajouter une société'; // obligatoire
+$pageTitle = 'Ajouter une société'; // obligatoire
 ob_start(); // obligatoire
 
 require "views/components/navigation.php";
