@@ -30,21 +30,21 @@ ob_start();
         </thead>
         <tbody>
             <tr>
-                <td id="invoiceNbr">F20190404-004</td>
+                <td id="invoiceNbr"><a class="linkToDetails" href="/invoice-details">F20190404-004</a></td>
                 <td id="invoiceDate">04/04/2019</td>
                 <td id="invoiceCompany">Jouet Jean-Michel</td>
                 <td id="invoiceCompanyType">Fournisseur</td>
                 <td><img src="./public/assets/img/delete-2.png"></td>
             </tr>
             <tr>
-                <td id="invoiceNbr">F20190404-003</td>
+                <td id="invoiceNbr"><a class="linkToDetails" href="/invoice-details">F20190404-003</a></td>
                 <td id="invoiceDate">04/04/2019</td>
                 <td id="invoiceCompany">Dunder Mifflin</td>
                 <td id="invoiceCompanyType">Client</td>
                 <td><img src="./public/assets/img/delete-2.png"></td>
             </tr>
             <tr>
-                <td id="invoiceNbr">F20190404-002</td>
+                <td id="invoiceNbr"><a class="linkToDetails" href="/invoice-details">F20190404-002</a></td>
                 <td id="invoiceDate">04/04/2019</td>
                 <td id="invoiceCompany">Pierre Cailloux</td>
                 <td id="invoiceCompanyType">Fournisseur</td>

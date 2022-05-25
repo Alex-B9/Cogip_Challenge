@@ -10,19 +10,18 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 130px;
-    line-height: 5px;
     background-image: url('/../public/assets/img/Vector1.svg');
     background-size:contain;
     background-repeat: no-repeat;
     background-position:bottom ;
     background-attachment: fixed;
-    background-position-y: 400px;
     .titleContainer {
         margin-top: 90px;
         margin-bottom: 25px;
         width: 75%;
         margin-left: auto;
         margin-right: auto;
+        line-height: 5px;
         h1 {
             text-transform: uppercase;
             color: #FFBF1C;
@@ -91,7 +90,14 @@ table {
         border: 1px solid #B9B9B9;
         background-color: white;
     }
-
+    .linkToDetails {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 600;
+        &:hover {
+            color: #48AFCF;
+        }
+    }
     img {
         width: 25px;
         height: 25px;

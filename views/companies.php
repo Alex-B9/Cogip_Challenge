@@ -31,19 +31,19 @@ ob_start();
             </thead>
             <tbody>
                 <tr>
-                    <td id="companyName">Raviga</td>
+                    <td id="companyName"><a class="linkToDetails" href="/company-details">Raviga</a></td>
                     <td id="companyNbr">US456 654 342</td>
                     <td id="companyCountry">United States</td>
                     <td><img src="./public/assets/img/delete-2.png"></td>
                 </tr>
                 <tr>
-                    <td id="companyName">Dunder Mifflin</td>
+                    <td id="companyName"><a class="linkToDetails" href="/company-details">Dunder Mifflin</a></td>
                     <td id="companyNbr">US678 765 765</td>
                     <td id="companyCountry">United States</td>
                     <td><img src="./public/assets/img/delete-2.png"></td>
                 </tr>
                 <tr>
-                    <td id="companyName">Jouets Jean-Michel</td>
+                    <td id="companyName"><a class="linkToDetails" href="/company-details">Jouets Jean-Michel</a></td>
                     <td id="companyNbr">FR 677 544 000</td>
                     <td id="companyCountry">France</td>
                     <td><img src="./public/assets/img/delete-2.png"></td>
@@ -67,19 +67,19 @@ ob_start();
             </thead>
             <tbody>
                 <tr>
-                    <td>Belgalol</td>
+                    <td><a class="linkToDetails" href="/company-details">Belgalol</a></td>
                     <td>BE0876 654 665</td>
                     <td>Belgique</td>
-                    <td><img src="./public/assets/img/delete-2.png"></td>
+                    <td><img src="./public/assets/img/delete-2.png"></a></td>
                 </tr>
                 <tr>
-                    <td>Pierre Cailloux</td>
+                    <td><a class="linkToDetails" href="/company-details">Pierre Cailloux</a></td>
                     <td>FR 678 908 654</td>
                     <td>France</td>
                     <td><img src="./public/assets/img/delete-2.png"></td>
                 </tr>
                 <tr>
-                    <td>Proximdr</td>
+                    <td><a class="linkToDetails" href="/company-details">Proximdr</a></td>
                     <td>BE0876 985 665</td>
                     <td>Belgique</td>
                     <td><img src="./public/assets/img/delete-2.png"></td>

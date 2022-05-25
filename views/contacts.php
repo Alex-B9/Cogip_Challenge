@@ -31,21 +31,21 @@ ob_start();
             </thead>
             <tbody>
                 <tr>
-                    <td id="contactName">Peter Gregory</td>
+                    <td id="contactName"><a class="linkToDetails" href="/contact-details">Peter Gregory</a></td>
                     <td id="contactPhone">555-4567</td>
                     <td id="contactEmail">peter.gregory@raviga.com</td>
                     <td id="contactCompany">Raviga</td>
                     <td><img src="./public/assets/img/delete-2.png"></td>
                 </tr>
                 <tr>
-                    <td id="contactName">Cameron Howe</td>
+                    <td id="contactName"><a class="linkToDetails" href="/contact-details">Cameron Howe</a></td>
                     <td id="contactPhone">555-7896</td>
                     <td id="contactEmail">cam.howe@mutiny.net</td>
                     <td id="contactCompany">Mutiny</td>
                     <td><img src="./public/assets/img/delete-2.png"></td>
                 </tr>
                 <tr>
-                    <td id="contactName">Dwight Schrute</td>
+                    <td id="contactName"><a class="linkToDetails" href="/contact-details">Dwight Schrute</a></td>
                     <td id="contactPhone">555-9859</td>
                     <td id="contactEmail">dwight.schrute@ddmfl.com</td>
                     <td id="contactCompany">Dunder Mifflin</td>
