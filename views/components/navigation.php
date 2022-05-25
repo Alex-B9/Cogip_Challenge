@@ -13,16 +13,7 @@
                 <li class='mainMenuItem'><a href='/companies'>Sociétés</a></li>
                 <li class='mainMenuItem'><a href='/contacts'>Contacts</a></li>
 
-                <li class='adminMenu'><a href='#'><?php echo 'Admin'; ?></a>
-                        <div class='adminMenuContent'>
-                                <a href="/dashboard"><?php echo 'Dashboard'; ?></a>
-                                <a href="/invoice-new"><?php echo 'Ajouter une facture'; ?></a>
-                                <a href="/company-new"><?php echo 'Ajouter une société'; ?></a>
-                                <a href="/contact-new"><?php echo 'Ajouter un contact'; ?></a>
-                        </div>
-                </li>
-
-                <!-- <?php if(isset($_SESSION['Username'])): ?>
+                <?php if(isset($_SESSION['Username'])): ?>
                     <li class='adminMenu'><a href='#'><?php echo 'Admin'; ?></a>
                         <div class='adminMenuContent'>
                                 <a href="/dashboard"><?php echo 'Dashboard'; ?></a>
@@ -33,7 +24,7 @@
                     </li>
                 <?php else:?>
                     <li class='connexionItem'><a href='/connect'><?php echo 'Connexion'; ?></a></li>
-                <?php endif;?> -->
+                <?php endif;?>
 
             </ul>
         </div>
