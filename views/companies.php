@@ -19,7 +19,7 @@ ob_start();
     </div>
     <div class ="add">
      <a href="/company-new">
-         <img src="./public/assets/img/add-house-1.png"> Nouvelle société</a> 
+         <img src="./public/assets/img/add-1.png"> Nouvelle société</a> 
 </div>
 </div>
 <div class="container-img">

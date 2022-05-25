@@ -66,7 +66,8 @@ body {
             
             
         }
-        a {display: flex;
+        a {
+            display: flex;
             align-items: center;
             gap:10px;
             text-decoration: none;
@@ -81,8 +82,8 @@ body {
             &:hover {
                 color: #48AFCF;
                 background-color: #e0f8ff;
-                border-color:#48AFCF;
-                font-weight: bold;
+                border:1px solid #48AFCF;
+                font-weight: 600;
 
             }
         }
@@ -90,17 +91,24 @@ body {
 }
 
 .tableContainer {
-    margin-top: 90px;
-    margin-bottom: 50px;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+     margin-top: 50px;
+    margin-bottom: 70px;
+    // width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    // margin-left: auto;
+    // margin-right: auto;
     h3 {
-        color: #1A4688;
+        color: #2b2b2b;
         font-family: 'Inter', sans-serif; 
         font-weight: 700;
         font-size: 24px;
         text-transform: uppercase;
+        
+        
     }
 }
 
@@ -108,13 +116,21 @@ table {
     border-collapse: collapse;
     th {
         background-color: #48AFCF;
-        color: white;
+        color: rgb(238, 238, 238);
         border: 1px solid #B9B9B9;
-        padding: 10px;
+        padding: 30px;
+        text-align: left;
+        font-size: 15px;
+        font-family: 'Inter',sans-serif;
+        font-weight: 700;
     }
     td {
         border: 1px solid #B9B9B9;
-        padding: 15px;
+        padding:25px;
+        font-family: 'Roboto',sans-serif;
+        font-weight: 400;
+        color:#2b2b2b;
+        text-align: left;
 
     }
     tr {
@@ -123,8 +139,7 @@ table {
     }
 
     img {
-        width: 25px;
-        height: 25px;
+        width: 34px;
     }
 }
 .bg-color{
@@ -133,7 +148,7 @@ table {
     margin-top:40px;
 }
 .img-companie{
-width:350px;
+width:370px;
 
 }
 .container-img{
@@ -145,4 +160,11 @@ width:350px;
     display:flex;
     align-items: center;
     justify-content: space-around;
+}
+.img-contact{
+    width:380px;
+    margin-top:20px;
+}
+.img-facture{
+    width:430px;
 }
