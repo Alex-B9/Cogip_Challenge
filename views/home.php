@@ -1,6 +1,7 @@
 <?php
+$resetCss = './../public/styles/reset/reset.css';
 $pageCSS = './../public/styles/pages/home/home.css';
-$pageTitle = 'Home page'; // obligatoire
+$pageTitle = 'Accueil'; // obligatoire
 ob_start(); // obligatoire
 
 require "views/components/navigation.php";
