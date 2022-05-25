@@ -74,4 +74,9 @@ class ErrorMessage
         return "Error: incorrect contact";
     }
 
+    public function invoiceIdPeopleError(): string
+    {
+        return "Error: incorrect ID People";
+    }
+
 }

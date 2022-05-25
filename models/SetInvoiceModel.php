@@ -10,9 +10,13 @@ class SetInvoiceModel
     private $date;
     private int $idCompany;
     public int $idPeople;
-    private string $contact;
 
     private CreateModel $dbCreate;
+
+    public function __construct()
+    {
+        $this->dbCreate = new CreateModel();
+    }
 
     public function setInvoiceNumber(string $invoiceNumber): void
     {
@@ -24,7 +28,7 @@ class SetInvoiceModel
         $this->date = date('Y-m-d', strtotime($date));
     }
 
-    public function setCompany(int $IdCompany): void
+    public function setIdCompany(int $IdCompany): void
     {
         $this->idCompany = $IdCompany;
     }
@@ -34,15 +38,13 @@ class SetInvoiceModel
         $this->idPeople = $idPeople;
     }
 
-
-    public function setContact(string $contact): void
-    {
-        $this->contact = $contact;
-    }
-
     public function setInvoiceDb(): void
     {
-        $this->dbCreate->createInvoice($this->idCompany, $this->idPeople,
-            $this->invoiceNumber, $this->date);
+//        $this->dbCreate->createInvoice(0, $this->idCompany, $this->idPeople,
+//            $this->invoiceNumber, $this->date);
+
+                $this->dbCreate->createInvoice($this->idCompany,
+        $this->idPeople, $this->invoiceNumber, $this->date);
+
     }
 }

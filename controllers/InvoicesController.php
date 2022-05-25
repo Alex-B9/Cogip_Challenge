@@ -24,6 +24,7 @@ class InvoicesController extends Controller
 
     public function store()
     {
+//        var_dump(Request::get());
         if (isset($_POST))
         {
             $validate = new ValidateData();
@@ -32,9 +33,8 @@ class InvoicesController extends Controller
 
             $invoiceNumber = $validate->invoiceNumberIsValid(Request::get()['invoiceNumber']);
             $invoiceDate = Request::get()['invoiceDate'];
-            $invoiceCompany = $validate->companyNameIsValid(Request::get()['invoiceCompany']);
+            $invoiceCompany = Request::get()['invoiceCompany'];
             $invoiceContact = Request::get()['invoiceContact'];
-            $idPeople  = Request::get()[''];
 
             if ($invoiceNumber)
             {
@@ -54,7 +54,7 @@ class InvoicesController extends Controller
             }
             if ($invoiceCompany)
             {
-                $setInvoice->setCompany($invoiceCompany);
+                $setInvoice->setIdCompany($invoiceCompany);
             }
             else
             {
@@ -62,13 +62,13 @@ class InvoicesController extends Controller
             }
             if ($invoiceContact)
             {
-                $setInvoice->setContact($invoiceContact);
+                $setInvoice->setIdPeople($invoiceContact);
             }
             else
             {
-                echo $error->invoiceContactError();
+                echo $error->invoiceIdPeopleError();
             }
-            if ($)
+
 
             if ($invoiceNumber && $invoiceDate && $invoiceCompany && $invoiceContact)
             {

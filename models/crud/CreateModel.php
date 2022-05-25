@@ -44,17 +44,17 @@ class CreateModel
         ));
     }
 
-    public function createInvoice(int $companyId, int $companyPeople, string
-    $invoiceNumber, $date): void
+    public function createInvoice(int $companyId, int
+$companyPeople, string $invoiceNumber, $date): void
     {
-        $sql = "INSERT INTO invoices (id_company, id_people, number_invoice, date) 
-                VALUES (:id_company, :id_people, :number_invoice, :date)";
+        $sql = "INSERT INTO invoices (Id_Company, Id_People, number_invoice, date) 
+                VALUES (:Id_Company, :Id_People, :number_invoice, :date)";
 
         $statement = $this->db->prepare($sql);
 
         $statement->execute(array(
-            ':id_company' => $companyId,
-            ':id_people' => $companyPeople,
+            ':Id_Company' => $companyId,
+            ':Id_People' => $companyPeople,
             ':number_invoice' => $invoiceNumber,
             ':date' => $date
         ));

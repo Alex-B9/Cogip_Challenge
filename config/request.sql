@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `companies` (
                                            `Id_Type` int(11) NOT NULL,
                                            `company_name` varchar(70) NOT NULL,
                                            `country` varchar(25) NOT NULL,
-                                           `vat_number` int(11) NOT NULL,
+                                           `vat_number` varchar(15) NOT NULL,
                                            PRIMARY KEY (`CompaniesId`),
                                            KEY `Id_Type` (`Id_Type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -50,8 +50,7 @@ CREATE TABLE IF NOT EXISTS `invoices` (
                                           `Id_Company` int(11) NOT NULL,
                                           `Id_People` int(11) NOT NULL,
                                           `number_invoice` int(11) NOT NULL,
-                                          `lastname` varchar(20) NOT NULL,
-                                          `email` varchar(50) NOT NULL,
+                                          `date` date NOT NULL,
                                           PRIMARY KEY (`Id_Invoice`),
                                           KEY `Id_Company` (`Id_Company`),
                                           KEY `Id_People` (`Id_People`)

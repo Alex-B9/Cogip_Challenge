@@ -1,6 +1,9 @@
 <?php
 
+use App\controllers\Request;
+use App\controllers\ValidateData;
 use App\models\crud\ReadModel;
+use App\models\ErrorMessage;
 
 $resetCss = './../public/styles/reset/reset.css';
 $pageCSS = './../public/styles/pages/new/new.css';
@@ -18,11 +21,19 @@ require "views/components/navigation.php";
         <div class="addImg"><img src="../public/assets/img/email.png" alt="" id="contactNewImg"></div>
         <form class="addForm" action="/contact-store" method="post">
             <div class="formItem">
-                <label for="lastname">Prénom</label>
+                <label for="lastname">Nom</label>
                 <input type="text" id="lastname" name="lastname">
+                <?php $error = new ErrorMessage();
+                        $validate = new ValidateData();
+                        if (isset(Request::get()['submit'])){
+                       if (!$validate->nameIsValid(Request::get()['lastname']))
+                       {
+                           echo $error->firstnameError();
+                       }
+                        }?>
             </div>
             <div class="formItem">
-                <label for="firstname">Nom</label>
+                <label for="firstname">Prénom</label>
                 <input type="text" id="firstname" name="firstname">
             </div>
             <div class="formItem">
