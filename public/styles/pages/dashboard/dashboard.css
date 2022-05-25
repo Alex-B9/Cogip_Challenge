@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .container {
   max-width: 1050px;
   margin: 0 auto;
@@ -127,6 +127,7 @@ header .navbarContainer .linksContainer .mainMenu .adminMenu .adminMenuContent a
 
 body {
   font-family: "Raleway", sans-serif;
+  color: #373737;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 130px;
@@ -135,14 +136,14 @@ body {
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
+  background-position-y: 360px;
 }
 body .titleContainer {
   margin-top: 90px;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  line-height: 5px;
 }
 body .titleContainer h1 {
   text-transform: uppercase;
@@ -151,73 +152,64 @@ body .titleContainer h1 {
   font-weight: 800;
   font-size: 40px;
 }
-body .titleContainer h2 {
-  text-transform: uppercase;
-  color: #FFBF1C;
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 48px;
-}
-body .addContainer {
+body .usersContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
+}
+body .usersContainer .userItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
   background-color: #FFFFFF;
   border-radius: 30px;
   box-shadow: -23px 203px 82px rgba(0, 0, 0, 0.03), -13px 114px 69px rgba(0, 0, 0, 0.1), -6px 51px 51px rgba(0, 0, 0, 0.17), -1px 13px 28px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+body .usersContainer .userItem .userImg {
+  width: 10%;
+  padding-left: 20px;
+}
+body .usersContainer .userItem .userImg img {
+  width: 60px;
+  filter: invert(22%) sepia(62%) saturate(1439%) hue-rotate(193deg) brightness(91%) contrast(96%);
+}
+body .usersContainer .userItem .userName {
+  width: 40%;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+body .usersContainer .userItem .userRights {
+  width: 50%;
   display: flex;
   flex-direction: row;
-}
-body .addContainer .addImg {
-  width: 40%;
-  background-color: #EAF7F9;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-}
-body .addContainer .addImg img {
-  height: 450px;
-  transform: scaleX(-1) translateX(25%);
-}
-body .addContainer .addForm {
-  margin: 35px 90px 35px 20px;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
-body .addContainer .addForm .formItem {
-  display: flex;
-  flex-direction: column;
   gap: 10px;
+  color: #B9B9B9;
 }
-body .addContainer .addForm .formItem label {
-  font-weight: 400;
-  font-size: 20px;
-  color: #414141;
-  margin-top: 10px;
+body .usersContainer .userItem .userRights input[type=radio]:checked + label {
+  color: #373737;
+  font-weight: 600;
 }
-body .addContainer .addForm .formItem input, body .addContainer .addForm .formItem select, body .addContainer .addForm .formItem option {
-  height: 30px;
-  padding: 5px;
-  background-color: #DCEDF0;
-  border-radius: 10px;
-  border: none;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #686868;
+body .saveBtn {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
-body .addContainer .addForm .formItem button {
+body .saveBtn button {
   background-color: #FFBF1C;
   border: none;
   box-shadow: -2px 10px 3px rgba(86, 71, 6, 0.01), -1px 7px 3px rgba(86, 71, 6, 0.12), -1px 4px 2px rgba(86, 71, 6, 0.4), 0px 2px 2px rgba(86, 71, 6, 0.68), 0px 0px 1px rgba(86, 71, 6, 0.79), 0px 0px 0px rgba(86, 71, 6, 0.8);
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
   padding: 9px 25px;
   border-radius: 24px;
   font-family: "Inter", sans-serif;
@@ -228,8 +220,14 @@ body .addContainer .addForm .formItem button {
   cursor: pointer;
   transition: transform 0.1s linear;
 }
-body .addContainer .addForm .formItem button:hover {
+body .saveBtn button:hover {
   transform: scale(0.9);
 }
+body .saveBtn button a {
+  text-decoration: none;
+}
+body .saveBtn button a:visited {
+  color: inherit;
+}
 
-/*# sourceMappingURL=new.css.map */
+/*# sourceMappingURL=dashboard.css.map */

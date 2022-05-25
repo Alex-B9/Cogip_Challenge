@@ -1,3 +1,4 @@
+
 <?php
 
 $resetCss = "public/styles/reset/reset.css";
@@ -8,14 +9,36 @@ ob_start();
 
 <?php require "views/components/navigation.php"; ?>
 
+
+<div class="bg-color">
+<div class="container">
+<div class="container-header">
 <div class="titleContainer">
+    <div>
+    <h1>COGIP</h1>
+    <p class="subtitle">Liste des contact</p>
+    </div>
+    <div class ="add">
+     <a href="/contact-new">
+         <img src="./public/assets/img/add-1.png"> Nouveau contact</a> 
+</div>
+</div>
+<div class="container-img">
+    <img class="img-contact" src="../public/assets/img/email.png" alt="image company">
+</div>
+
+</div></div> 
+
+
+
+<!-- <div class="titleContainer">
     <h1>COGIP</h1>
     <h2>Liste des contacts</h2>
 </div>
 
 <div class ="add">
     <a href="/contact-new"><img src="./public/assets/img/user.png"> Nouveau contact</a>
-</div>
+</div> -->
 
 <div class="tableContainer">
     <div class="tableItem">
@@ -31,21 +54,21 @@ ob_start();
             </thead>
             <tbody>
                 <tr>
-                    <td id="contactName">Peter Gregory</td>
+                    <td id="contactName"><a class="linkToDetails" href="/contact-details">Peter Gregory</a></td>
                     <td id="contactPhone">555-4567</td>
                     <td id="contactEmail">peter.gregory@raviga.com</td>
                     <td id="contactCompany">Raviga</td>
                     <td><img src="./public/assets/img/delete-2.png"></td>
                 </tr>
                 <tr>
-                    <td id="contactName">Cameron Howe</td>
+                    <td id="contactName"><a class="linkToDetails" href="/contact-details">Cameron Howe</a></td>
                     <td id="contactPhone">555-7896</td>
                     <td id="contactEmail">cam.howe@mutiny.net</td>
                     <td id="contactCompany">Mutiny</td>
                     <td><img src="./public/assets/img/delete-2.png"></td>
                 </tr>
                 <tr>
-                    <td id="contactName">Dwight Schrute</td>
+                    <td id="contactName"><a class="linkToDetails" href="/contact-details">Dwight Schrute</a></td>
                     <td id="contactPhone">555-9859</td>
                     <td id="contactEmail">dwight.schrute@ddmfl.com</td>
                     <td id="contactCompany">Dunder Mifflin</td>
