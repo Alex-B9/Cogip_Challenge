@@ -133,6 +133,7 @@ header .navbarContainer .linksContainer .mainMenu .adminMenu .adminMenuContent a
 }
 
 body {
+  width: 100%;
   margin: 0 auto;
   font-family: "Raleway", sans-serif;
 }
