@@ -1,5 +1,6 @@
 <?php
 
+use App\controllers\Request;
 use App\models\crud\ReadModel;
 
 $resetCss = './../public/styles/reset/reset.css';
@@ -21,10 +22,24 @@ require "views/components/navigation.php";
         <div class="formItem">
             <label for="invoiceNumber">Numéro de facture</label>
             <input type="text" id="invoiceNumber" name="invoiceNumber">
+            <?php
+                if (isset(Request::get()['submit'])){
+                    if (isset($_SESSION['dataInvoice']['number'])){
+                        echo $_SESSION['invoiceError']['errNumber'];
+                    }
+                }
+            ?>
         </div>
         <div class="formItem">
             <label for="invoiceDate">Date</label>
             <input type="date" id="invoiceDate" name="invoiceDate">
+            <?php
+            if (isset(Request::get()['submit'])){
+                if (isset($_SESSION['dataInvoice']['date'])){
+                    echo $_SESSION['invoiceError']['errDate'];
+                }
+            }
+            ?>
         </div>
         <div class="formItem">
             <label for="invoiceCompany">Société</label>
@@ -50,7 +65,7 @@ require "views/components/navigation.php";
                 </select>
         </div>
         <div class="formItem">
-                <button type="submit" value="submit">Ajouter</button>
+                <input type="submit" name="submit" value="Ajouter">
         </div>
     </form>
 </div>

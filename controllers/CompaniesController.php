@@ -9,6 +9,8 @@ class CompaniesController extends Controller
 {
     public function index()
     {
+        unset($_SESSION['dataCompany']);
+        unset($_SESSION['companyError']);
         require $this->view('companies');
     }
 
@@ -24,7 +26,8 @@ class CompaniesController extends Controller
 
     public function store()
     {
-        if (isset($_POST)) {
+            session_start();
+
             $validate = new ValidateData();
             $setCompany = new SetCompanyModel();
             $error = new ErrorMessage();
@@ -34,22 +37,41 @@ class CompaniesController extends Controller
             $companyCountry = $validate->countryIsValid(Request::get()['companyCountry']);
             $companyType = Request::get()['companyType'];
 
+            if (!$companyName){
+                $_SESSION['dataCompany']['name'] = $companyName;
+                $_SESSION['companyError']['errName'] =
+                    $error->companyNameError();
+            }
+            if (!$companyVat){
+                $_SESSION['dataCompany']['vat'] = $companyVat;
+                $_SESSION['companyError']['errVat'] = $error->companyVatError();
+            }
+            if (!$companyCountry){
+                $_SESSION['dataCompany']['country'] = $companyCountry;
+                $_SESSION['companyError']['errCountry'] =
+                    $error->companyCountryError();
+            }
+
+            if ($_POST['submit']) {
+                if (empty($companyName) OR empty($companyVat) OR empty
+                    ($companyCountry)){
+                    $this->create();
+                }
+            }
+
             if ($companyName) {
+                unset($_SESSION['companyError']['ErrName']);
                 $setCompany->setName($companyName);
-            } else {
-                echo $error->companyNameError();
             }
 
             if ($companyVat) {
+                unset($_SESSION['companyError']['ErrVat']);
                 $setCompany->setVatNumber($companyVat);
-            } else {
-                echo $error->companyVatError();
             }
 
             if ($companyCountry) {
+                unset($_SESSION['companyError']['ErrCountry']);
                 $setCompany->setCountry($companyCountry);
-            } else {
-                echo $error->companyCountryError();
             }
 
             if ($companyType) {
@@ -58,11 +80,7 @@ class CompaniesController extends Controller
 
             if ($companyName && $companyVat && $companyCountry) {
                 $setCompany->setCompanyDb();
-            } else {
-                echo $error->incorrectInformation();
+                header('location: /companies');
             }
-
-             header('location: /companies');
         }
-    }
 }

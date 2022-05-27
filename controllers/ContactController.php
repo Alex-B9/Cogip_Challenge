@@ -23,7 +23,6 @@ class ContactController extends Controller
     {
             session_start();
 
-//        if (isset($_POST['submit'])) {
             $validate = new ValidateData();
             $setContact = new SetContactModel();
             $error = new ErrorMessage();
@@ -34,40 +33,30 @@ class ContactController extends Controller
             $phone = $validate->phoneIsValid(Request::get()['phone']);
             $email = $validate->emailIsValid(Request::get()['email']);
 
-//            $_SESSION['dataContact']['lastname'] = $lastname;
-            $_SESSION['dataContact']['firstname'] = $firstname;
-            $_SESSION['dataContact']['phone'] = $phone;
-            $_SESSION['dataContact']['email'] = $email;
-
             if (!$lastname){
                 $_SESSION['dataContact']['lastname'] = $lastname;
-                echo $_SESSION['contactError']['errLastname'] =
+                $_SESSION['contactError']['errLastname'] =
                     $error->lastnameError();
             }
-            // Variable error
-//        if (!$_SESSION['dataContact']['lastname']) {
-//            $_SESSION['contactError']['errLastname'] =
-//                $error->lastnameError();
-//        }
-            $_SESSION['contactError']['errFirstname'] =
-                $error->firstnameError();
-            $_SESSION['contactError']['errPhone'] =
-                $error->phoneError();
-            $_SESSION['contactError']['errEmail'] =
-                $error->emailError();
-//            $lname = null;
-//            $lname_err = null;
-//            $fname = null;
-//            $fname_err = null;
-//
-//            $lname = Request::session()[$validate->nameIsValid(Request::get()['lastname'])];
+            if (!$firstname){
+                $_SESSION['dataContact']['firstname'] = $firstname;
+                $_SESSION['contactError']['errFirstname'] =
+                    $error->firstnameError();
+            }
+            if (!$phone){
+                $_SESSION['dataContact']['phone'] = $phone;
+                $_SESSION['contactError']['errPhone'] =
+                    $error->phoneError();
+            }
+            if (!$email){
+                $_SESSION['dataContact']['email'] = $email;
+                $_SESSION['contactError']['errEmail'] =
+                    $error->emailError();
+            }
 
-            print_r($_SESSION['dataContact']);
             if ($_POST['submit']) {
-                if (empty($lastname)) {
-//                    echo $_SESSION['contactError']['ErrLastname'];
-//                    echo "coucou";
-//                    echo "<script> window.location.href='/contact-new';</script>";
+                if (empty($lastname) OR empty($firstname) OR empty($phone) OR
+                empty($email)) {
                     $this->create();
                 }
             }
@@ -79,41 +68,27 @@ class ContactController extends Controller
                 unset($_SESSION['contactError']['ErrLastname']);
                 $setContact->setLastname($lastname);
             }
-            else {
-                echo $_SESSION['contactError']['ErrLastname'];
-            }
 
             if ($firstname) {
+                unset($_SESSION['contactError']['ErrFirstname']);
                 $setContact->setFirstname($firstname);
             }
-//            else {
-//                echo $error->firstnameError();
-//            }
 
             if ($phone) {
+                unset($_SESSION['contactError']['ErrPhone']);
                 $setContact->setPhone($phone);
             }
-//            else {
-//                echo $error->phoneError();
-//            }
 
             if ($email) {
+                unset($_SESSION['contactError']['ErrEmail']);
                 $setContact->setEmail($email);
             }
-//            else {
-//                echo $error->emailError();
-//            }
 
             if ($id && $lastname && $firstname && $phone && $email) {
                 $setContact->setPeopleDb();
+                header('location: /contact');
             }
-//            else {
-//                echo $error->incorrectInformation();
-//            }
-
-//            $this->create();
         }
-//    }
 
     public function show() // maybe ID ?
     {

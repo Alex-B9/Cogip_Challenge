@@ -36,50 +36,62 @@ class InvoicesController extends Controller
             $invoiceCompany = Request::get()['invoiceCompany'];
             $invoiceContact = Request::get()['invoiceContact'];
 
+            if (!$invoiceNumber){
+                $_SESSION['dataInvoice']['number'] = $invoiceNumber;
+                $_SESSION['invoiceError']['errNumber'] =
+                    $error->invoiceNumberError();
+            }
+            if (!$invoiceDate){
+                $_SESSION['dataInvoice']['date'] = $invoiceDate;
+                $_SESSION['invoiceError']['errDate'] =
+                    $error->invoiceDateError();
+            }
+            if (!$invoiceCompany){
+                $_SESSION['dataInvoice']['company'] = $invoiceCompany;
+                $_SESSION['invoiceError']['errCompany'] =
+                    $error->invoiceCompanyError();
+            }
+            if (!$invoiceContact){
+                $_SESSION['dataInvoice']['contact'] = $invoiceContact;
+                $_SESSION['invoiceError']['errContact'] =
+                    $error->invoiceContactError();
+            }
+
+            if ($_POST['submit']){
+                if (empty($invoiceNumber) OR empty($invoiceDate) OR empty
+                    ($invoiceCompany) OR empty($invoiceContact)){
+                    $this->create();
+                }
+            }
+
             if ($invoiceNumber)
             {
+                unset($_SESSION['invoiceError']['number']);
                 $setInvoice->setInvoiceNumber($invoiceNumber);
-            }
-            else
-            {
-                echo $error->invoiceNumberError();
             }
             if ($invoiceDate)
             {
+                unset($_SESSION['invoiceError']['date']);
                 $setInvoice->setDate($invoiceDate);
-            }
-            else
-            {
-                echo $error->invoiceDateError();
             }
             if ($invoiceCompany)
             {
+                unset($_SESSION['invoiceError']['company']);
                 $setInvoice->setIdCompany($invoiceCompany);
-            }
-            else
-            {
-                echo $error->invoiceCompanyError();
             }
             if ($invoiceContact)
             {
+                unset($_SESSION['invoiceError']['contact']);
                 $setInvoice->setIdPeople($invoiceContact);
-            }
-            else
-            {
-                echo $error->invoiceIdPeopleError();
             }
 
 
             if ($invoiceNumber && $invoiceDate && $invoiceCompany && $invoiceContact)
             {
                 $setInvoice->setInvoiceDb();
-            }
-            else
-            {
-                echo $error->incorrectInformation();
+                header('location: /invoices');
             }
 
-            header('location: /invoices');
         }
     }
 }
