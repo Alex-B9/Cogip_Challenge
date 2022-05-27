@@ -6,6 +6,7 @@ $resetCss = "public/styles/reset/reset.css";
 $pageCSS = 'public/styles/pages/list/list.css';
 $pageTitle = 'Sociétés';
 ob_start();
+session_start();
 ?>
 
 <?php require "views/components/navigation.php"; ?>
@@ -15,10 +16,13 @@ ob_start();
         <h2>Liste des sociétés</h2>
     </div>
 
+<?php
+if ($_SESSION['connected']) {
+?>
     <div class="add">
         <a href="/company-new"><img src="./public/assets/img/add-house-1.png"> Nouvelle société</a>
     </div>
-
+<?php } ?>
     <div class="tableContainer">
         <h3>Clients</h3>
         <div class="tableItem">
@@ -28,7 +32,11 @@ ob_start();
                     <th>NOM</th>
                     <th>TVA</th>
                     <th>PAYS</th>
+                    <?php
+                    if ($_SESSION['connected']) {
+                    ?>
                     <th></th>
+                    <?php } ?>
                 </tr>
                 </thead>
                 <tbody>
@@ -38,7 +46,11 @@ ob_start();
                         <td><?= $item['company_name'] ?></td>
                         <td><?= $item['vat_number'] ?></td>
                         <td><?= $item['country'] ?></td>
-                        <td><img src="./public/assets/img/delete-2.png"></td>
+                        <?php
+                        if ($_SESSION['connected']) {
+                        ?>
+                            <td><img src="./public/assets/img/delete-2.png"></td>
+                        <?php } ?>
                     </tr>
                 <?php } ?>
                 </tbody>
@@ -55,7 +67,11 @@ ob_start();
                     <th>NOM</th>
                     <th>TVA</th>
                     <th>PAYS</th>
-                    <th></th>
+                    <?php
+                    if ($_SESSION['connected']) {
+                    ?>
+                        <th></th>
+                    <?php } ?>
                 </tr>
                 </thead>
                 <tbody>
@@ -65,7 +81,11 @@ ob_start();
                         <td><?= $item['company_name'] ?></td>
                         <td><?= $item['vat_number'] ?></td>
                         <td><?= $item['country'] ?></td>
-                        <td><img src="./public/assets/img/delete-2.png"></td>
+                        <?php
+                        if ($_SESSION['connected']) {
+                        ?>
+                            <td><img src="./public/assets/img/delete-2.png"></td>
+                        <?php } ?>
                     </tr>
                 <?php } ?>
                 </tbody>

@@ -22,7 +22,19 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+--
+-- Structure de la table `accounts`
+--
+DROP TABLE IF EXISTS `accounts`;
+CREATE TABLE IF NOT EXISTS `accounts` (
+                            `id` int(11) NOT NULL,
+                            `username` varchar(25) NOT NULL,
+                            `email` varchar(60) NOT NULL,
+                            `password` varchar(255) NOT NULL,
+                            PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
 --
 -- Structure de la table `companies`
 --
@@ -49,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `invoices` (
                                           `Id_Invoice` int(11) NOT NULL AUTO_INCREMENT,
                                           `Id_Company` int(11) NOT NULL,
                                           `Id_People` int(11) NOT NULL,
-                                          `number_invoice` int(11) NOT NULL,
+                                          `number_invoice` varchar(15) NOT NULL,
                                           `date` date NOT NULL,
                                           PRIMARY KEY (`Id_Invoice`),
                                           KEY `Id_Company` (`Id_Company`),

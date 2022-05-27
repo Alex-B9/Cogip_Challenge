@@ -4,6 +4,7 @@ $resetCss = "public/styles/reset/reset.css";
 $pageCSS = 'public/styles/pages/connect/connect.css';
 $pageTitle = 'Connexion';
 ob_start();
+session_start();
 ?>
 <?php require "views/components/navigation.php"; ?>
     <div class="titleContainer">

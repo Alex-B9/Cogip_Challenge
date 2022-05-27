@@ -22,8 +22,6 @@ class GetUserModel
         if (!is_bool($this->dbRead->getEmailByRow($this->email, 'accounts'))) {
             $this->email = $this->dbRead->getEmailByRow($this->email, 'accounts')['email'];
 
-            Database::disconnect();
-
             return $this->email;
         }
 
@@ -33,8 +31,6 @@ class GetUserModel
     public function getPassword()
     {
         $this->password = $this->dbRead->getEmailByRow($this->email, 'accounts')['password'];
-
-        Database::disconnect();
 
         return $this->password;
     }

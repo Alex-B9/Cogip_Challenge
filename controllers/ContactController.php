@@ -86,7 +86,7 @@ class ContactController extends Controller
 
             if ($id && $lastname && $firstname && $phone && $email) {
                 $setContact->setPeopleDb();
-                header('location: /contact');
+                header('location: /contacts');
             }
         }
 

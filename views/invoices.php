@@ -1,9 +1,12 @@
 <?php
 
+use App\models\crud\ReadModel;
+
 $resetCss = "public/styles/reset/reset.css";
 $pageCSS = 'public/styles/pages/list/list.css';
 $pageTitle = 'Factures';
 ob_start();
+session_start();
 ?>
 
 <?php require "views/components/navigation.php"; ?>
@@ -13,9 +16,13 @@ ob_start();
     <h2>Liste des factures</h2>
 </div>
 
-<div class ="add">
-    <a href="/invoice-new"><img src="./public/assets/img/document-1.png"> Nouvelle Facture</a>
-</div>
+<?php
+if ($_SESSION['connected']) {
+?>
+    <div class ="add">
+        <a href="/invoice-new"><img src="./public/assets/img/document-1.png"> Nouvelle Facture</a>
+    </div>
+<?php } ?>
 
 <div class="tableContainer">
     <table class="tableItem">
@@ -25,31 +32,29 @@ ob_start();
                 <th>DATES</th>
                 <th>SOCIETE</th>
                 <th>TYPE</th>
-                <th></th>
+                <?php
+                if ($_SESSION['connected']) {
+                ?>
+                    <th></th>
+                <?php } ?>
             </tr>
         </thead>
         <tbody>
+        <?php $getInvoice = new ReadModel();
+
+        foreach ($getInvoice->getAllInvoices() as $item) { ?>
             <tr>
-                <td id="invoiceNbr">F20190404-004</td>
-                <td id="invoiceDate">04/04/2019</td>
-                <td id="invoiceCompany">Jouet Jean-Michel</td>
-                <td id="invoiceCompanyType">Fournisseur</td>
+                <td id="invoiceNbr"><?= $item['number_invoice'] ?></td>
+                <td id="invoiceDate"><?= $item['date'] ?></td>
+                <td id="invoiceCompany"><?= $item['company_name'] ?></td>
+                <td id="invoiceCompanyType"><?= $item['Type'] ?></td>
+                <?php
+                if ($_SESSION['connected']) {
+                ?>
                 <td><img src="./public/assets/img/delete-2.png"></td>
+                <?php } ?>
             </tr>
-            <tr>
-                <td id="invoiceNbr">F20190404-003</td>
-                <td id="invoiceDate">04/04/2019</td>
-                <td id="invoiceCompany">Dunder Mifflin</td>
-                <td id="invoiceCompanyType">Client</td>
-                <td><img src="./public/assets/img/delete-2.png"></td>
-            </tr>
-            <tr>
-                <td id="invoiceNbr">F20190404-002</td>
-                <td id="invoiceDate">04/04/2019</td>
-                <td id="invoiceCompany">Pierre Cailloux</td>
-                <td id="invoiceCompanyType">Fournisseur</td>
-                <td><img src="./public/assets/img/delete-2.png"></td>
-            </tr>
+        <?php } ?>
         </tbody>
     </table>
 </div>
