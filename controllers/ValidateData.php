@@ -14,7 +14,7 @@ class ValidateData
         return (!preg_match("/^[a-zA-Z_.-]{3,28}+@+[a-z]{3,15}+\.+[a-z]{2,6}$/", $email)) ? FALSE : trim($email);
     }
 
-    public function phoneIsValid($phoneNumber): int
+    public function phoneIsValid($phoneNumber): string
     {
         return (!preg_match("/[\d-]{8,10}/", $phoneNumber)) ? FALSE : trim
         ($phoneNumber);

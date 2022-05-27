@@ -2,6 +2,9 @@
 
 namespace App\models;
 
+use App\controllers\Request;
+
+
 class ErrorMessage
 {
     public function firstnameError(): string
@@ -11,7 +14,7 @@ class ErrorMessage
 
     public function lastnameError(): string
     {
-        return "Error: incorrect lastname !";
+        return "Error : incorrect lastname";
     }
 
     public function emailError(): string

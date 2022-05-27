@@ -7,7 +7,7 @@ use App\models\crud\CreateModel;
 class SetContactModel // set people table.
 {
     private int $companyId;
-    private int $phone;
+    private string $phone;
     private string $lastname;
     private string $firstname;
     private string $email;
@@ -26,7 +26,7 @@ class SetContactModel // set people table.
         return $this;
     }
 
-    public function setPhone(int $phone): SetContactModel
+    public function setPhone(string $phone): SetContactModel
     {
         $this->phone = htmlspecialchars($phone);
 

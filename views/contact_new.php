@@ -1,7 +1,9 @@
 <?php
+session_start();
 
 use App\controllers\Request;
 use App\controllers\ValidateData;
+use App\controllers\ContactController;
 use App\models\crud\ReadModel;
 use App\models\ErrorMessage;
 
@@ -23,14 +25,30 @@ require "views/components/navigation.php";
             <div class="formItem">
                 <label for="lastname">Nom</label>
                 <input type="text" id="lastname" name="lastname">
-                <?php $error = new ErrorMessage();
+                <?php   $error = new ErrorMessage();
                         $validate = new ValidateData();
-                        if (isset(Request::get()['submit'])){
-                       if (!$validate->nameIsValid(Request::get()['lastname']))
-                       {
-                           echo $error->firstnameError();
-                       }
-                        }?>
+                        $contact = new ContactController();
+//                        $lastname = $validate->nameIsValid(Request::get()['lastname']);
+//                        echo $_SESSION['contactError']['errLastname'];
+                        if (isset($_SESSION['dataContact']['lastname'])){
+//                            $contact->create();
+                            echo $_SESSION['contactError']['errLastname'];
+//                            echo "coucou";
+                        }
+//                        $lname = Request::session()[$validate->nameIsValid(Request::get()['lastname'])];
+//                        if (empty($lname))
+//                        {
+//                            echo $error->lastnameError();
+//                        }
+//                        if (isset(Request::get()['submit'])){
+//                            if (!$_SESSION['lastname']){
+//                                echo $error->firstnameError();
+//                            }
+//                       if (!$validate->nameIsValid(Request::get()['lastname']))
+//                       {
+//                           echo $error->firstnameError();
+//                       }
+//                        }?>
             </div>
             <div class="formItem">
                 <label for="firstname">Prénom</label>
@@ -55,7 +73,8 @@ require "views/components/navigation.php";
                 </select>
             </div>
             <div class="formItem">
-                <button type="submit" value="submit">Ajouter</button>
+                <input type="submit" name="submit"
+                       value="Ajouter">
             </div>
         </form>
     </div>

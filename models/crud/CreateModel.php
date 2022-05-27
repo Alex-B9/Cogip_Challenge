@@ -13,7 +13,8 @@ class CreateModel
         $this->db = Database::connect();
     }
 
-    public function createPeople(int $companyId, string $firstname, string $lastname, string $email, int $phone): void
+    public function createPeople(int $companyId, string $firstname, string
+    $lastname, string $email, string $phone): void
     {
         $sql = "INSERT INTO people (id_company, firstname, lastname, email, phone) 
                 VALUES (:id_company, :firstname, :lastname, :email, :Phone)";
