@@ -8,56 +8,53 @@ use App\models\crud\ReadModel;
 
 class GetPeopleModel
 {
+    private int $id;
     private string $firstname;
     private string $lastname;
     private string $email;
     private int $phone;
+    private string $company;
 
     private ReadModel $dbRead;
 
-    public function __construct($email)
+    public function __construct($id)
     {
-        $this->email = $email;
+        $this->id = $id;
         $this->dbRead = new ReadModel();
     }
 
     public function getFirstname(): string
     {
-        $this->firstname = $this->dbRead->getEmailByRow($this->email, 'people')['firstname'];
-
-        Database::disconnect();
+        $this->firstname = $this->dbRead->getPeopleAndCompanyById($this->id)['firstname'];
 
         return $this->firstname;
     }
 
     public function getLastname(): string
     {
-        $this->lastname = $this->dbRead->getEmailByRow($this->email, 'people')['lastname'];
-
-        Database::disconnect();
+        $this->lastname = $this->dbRead->getPeopleAndCompanyById($this->id)['lastname'];
 
         return $this->lastname;
     }
 
     public function getEmail(): string
     {
-        $this->email = $this->dbRead->getEmailByRow($this->email, 'people')['email'];
-
-        Database::disconnect();
+        $this->email = $this->dbRead->getPeopleAndCompanyById($this->id)['email'];
 
         return $this->email;
     }
 
     public function getPhone(): int
     {
-        $this->phone = $this->dbRead->getEmailByRow($this->email, 'people')['Phone'];
-
-        Database::disconnect();
+        $this->phone = $this->dbRead->getPeopleAndCompanyById($this->id)['Phone'];
 
         return $this->phone;
     }
 
-    public function getCompany()
+    public function getCompany(): string
     {
+        $this->company = $this->dbRead->getPeopleAndCompanyById($this->id)['company_name'];
+
+        return $this->company;
     }
 }

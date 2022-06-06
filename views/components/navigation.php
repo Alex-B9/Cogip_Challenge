@@ -13,13 +13,13 @@ session_start();
                 <li><a href='/contacts'>Contacts</a></li>
                 <?php
                 if (!$_SESSION['connected']) {
-                ?>
-                <li><a href='/connect'>Connexion</a></li>
+                    ?>
+                    <li><a href='/connect'>Connexion</a></li>
                 <?php } ?>
                 <?php
                 if ($_SESSION['connected']) {
-                ?>
-                <li><a href="/disconnect">Déconnexion</a></li>
+                    ?>
+                    <li><a href="/disconnect">Déconnexion</a></li>
                 <?php } ?>
             </ul>
         </div>

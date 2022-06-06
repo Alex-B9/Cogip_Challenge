@@ -3,6 +3,8 @@
 namespace App\controllers;
 
 use App\models\ErrorMessage;
+use App\models\GetInvoiceModel;
+use App\models\GetPeopleModel;
 use App\models\SetContactModel;
 
 class ContactController extends Controller
@@ -90,8 +92,11 @@ class ContactController extends Controller
             }
         }
 
-    public function show() // maybe ID ?
+    public function show($id)
     {
+        $people = new GetPeopleModel($id);
+        $invoice = new GetInvoiceModel($id);
+
         require $this->view('contact_details');
     }
 }

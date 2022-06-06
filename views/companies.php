@@ -18,7 +18,7 @@ session_start();
 
 <?php
 if ($_SESSION['connected']) {
-?>
+    ?>
     <div class="add">
         <a href="/company-new"><img src="./public/assets/img/add-house-1.png"> Nouvelle société</a>
     </div>
@@ -34,8 +34,8 @@ if ($_SESSION['connected']) {
                     <th>PAYS</th>
                     <?php
                     if ($_SESSION['connected']) {
-                    ?>
-                    <th></th>
+                        ?>
+                        <th></th>
                     <?php } ?>
                 </tr>
                 </thead>
@@ -48,7 +48,7 @@ if ($_SESSION['connected']) {
                         <td><?= $item['country'] ?></td>
                         <?php
                         if ($_SESSION['connected']) {
-                        ?>
+                            ?>
                             <td><img src="./public/assets/img/delete-2.png"></td>
                         <?php } ?>
                     </tr>
@@ -69,7 +69,7 @@ if ($_SESSION['connected']) {
                     <th>PAYS</th>
                     <?php
                     if ($_SESSION['connected']) {
-                    ?>
+                        ?>
                         <th></th>
                     <?php } ?>
                 </tr>
@@ -83,7 +83,7 @@ if ($_SESSION['connected']) {
                         <td><?= $item['country'] ?></td>
                         <?php
                         if ($_SESSION['connected']) {
-                        ?>
+                            ?>
                             <td><img src="./public/assets/img/delete-2.png"></td>
                         <?php } ?>
                     </tr>

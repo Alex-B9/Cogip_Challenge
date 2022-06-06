@@ -24,6 +24,17 @@ class ReadModel
         return $stmt->fetchAll();
     }
 
+    public function getPeopleAndCompanyById($id)
+    {
+        $sql = "SELECT * FROM people as p 
+                INNER JOIN companies c ON c.CompaniesId = p.Id_Company
+                WHERE p.Id_People = $id";
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
     public function getEmailByRow($email, $tableName)
     {
         $sql = "SELECT * FROM $tableName WHERE email = '$email'";
@@ -66,6 +77,15 @@ class ReadModel
                 FROM ((invoices 
                 INNER JOIN companies c ON invoices.Id_Company = c.CompaniesId)
                 INNER JOIN type_company tc ON c.Id_Type = tc.Id_Type)";
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public function getInvoiceByPeopleId(int $id): bool|array
+    {
+        $sql = "select number_invoice, date from invoices where Id_People = $id";
 
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
